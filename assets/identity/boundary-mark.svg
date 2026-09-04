@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 800" role="img" aria-labelledby="title desc">
+  <title id="title">The boundary is never just a line.</title>
+  <desc id="desc">A stacked typographic mark in which the descender of the j in just visually connects to the l in line.</desc>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&amp;display=swap');
+    .type { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 400; letter-spacing: -0.045em; }
+    .shadow { fill: #eabf9f; opacity: .58; }
+    .ink { fill: #171413; }
+  </style>
+
+  <g class="type shadow" transform="translate(6 7)">
+    <text x="22" y="150" font-size="162">The</text>
+    <text x="22" y="306" font-size="122">boundary</text>
+    <text x="22" y="444" font-size="116">is never</text>
+    <text x="22" y="580" font-size="116">just a</text>
+    <rect x="34" y="565" width="10" height="82" rx="2"/>
+    <text x="22" y="735" font-size="148">line.</text>
+  </g>
+
+  <g class="type ink">
+    <text x="22" y="150" font-size="162">The</text>
+    <text x="22" y="306" font-size="122">boundary</text>
+    <text x="22" y="444" font-size="116">is never</text>
+    <text x="22" y="580" font-size="116">just a</text>
+    <rect x="34" y="565" width="10" height="82" rx="2"/>
+    <text x="22" y="735" font-size="148">line.</text>
+  </g>
+</svg>
