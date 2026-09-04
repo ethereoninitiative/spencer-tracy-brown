@@ -82,7 +82,7 @@ dt{margin-bottom:.2rem;color:var(--cobalt)}dd{margin:0}
 .contact-row{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:2rem}
 .contact-row a{display:inline-flex;padding:.9rem 1.1rem;border:2px solid var(--ink);text-decoration:none;background:var(--solar);box-shadow:.3rem .3rem 0 var(--ink);font-weight:700}
 .contact-row a[href^="mailto:"]{--contact-mark-size:clamp(3.4rem,4.2vw,4rem);position:relative;margin-left:calc(var(--contact-mark-size) + .85rem)}
-.contact-row a[href^="mailto:"]::before{content:"";position:absolute;right:calc(100% + .85rem);top:50%;width:var(--contact-mark-size);height:var(--contact-mark-size);transform:translateY(-50%);background:url("../images/SunToad-transbkgrd.png") center/contain no-repeat;pointer-events:none}
+.contact-row a[href^="mailto:"]::before{content:"";position:absolute;right:calc(100% + .85rem);top:50%;width:var(--contact-mark-size);height:var(--contact-mark-size);transform:translateY(-50%);background:url("../images/SunToad-transbkgrd.png") center/contain no-repeat;cursor:pointer}
 .contact-row a:hover{background:var(--cadmium);color:#fff}
 .site-footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1.5rem 0 2rem;border-top:2px solid var(--ink)}
 
