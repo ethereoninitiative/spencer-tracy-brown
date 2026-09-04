@@ -29,6 +29,8 @@ main,.site-footer{width:min(var(--max),calc(100% - var(--gutter)*2));margin:0 au
 h1,h2,h3,p{margin-top:0}
 h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.045em}
 h1{margin-bottom:1.25rem;max-width:10.8ch;font-size:clamp(4rem,10vw,10rem);line-height:.88;text-shadow:.035em .035em 0 rgba(242,122,22,.15)}
+.boundary-mark-heading{max-width:none;margin:0 0 1.25rem;font-size:0;line-height:1;text-shadow:none}
+.boundary-mark-heading img{width:min(100%,47rem);height:auto;object-fit:contain;object-position:left center}
 h2{font-size:clamp(2.4rem,5.2vw,5.4rem);line-height:.98}
 .deck{max-width:50rem;color:var(--muted);font-size:clamp(1.08rem,1.8vw,1.38rem);line-height:1.75;border-left:.45rem solid var(--cadmium);padding-left:1rem}
 
@@ -90,8 +92,10 @@ dt{margin-bottom:.2rem;color:var(--cobalt)}dd{margin:0}
   .cover,.intro-band,.large-card,.statement-panel,.about-section,.practice-grid,.credential-strip{grid-template-columns:1fr}
   .work-grid{grid-template-columns:1fr}.work-card,.large-card{grid-column:auto}
   h1{max-width:none;font-size:clamp(4rem,18vw,7rem)}
+  .boundary-mark-heading{font-size:0}
+  .boundary-mark-heading img{width:min(100%,42rem)}
   .hero-art .art-frame{min-height:24rem}
   .credential-strip div{border-right:0;border-bottom:1px solid var(--line)}.credential-strip div:last-child{border-bottom:0}
 }
-@media(max-width:560px){:root{--gutter:.85rem}.site-nav a{font-size:.7rem}.cover{padding-top:2.2rem}h1{font-size:clamp(3.4rem,20vw,5.6rem)}}
+@media(max-width:560px){:root{--gutter:.85rem}.site-nav a{font-size:.7rem}.cover{padding-top:2.2rem}h1{font-size:clamp(3.4rem,20vw,5.6rem)}.boundary-mark-heading{font-size:0}.boundary-mark-heading img{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
