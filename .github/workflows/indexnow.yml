@@ -1,0 +1,24 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**/*.md'
+      - '.github/pull_request_template.md'
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify participating search engines
+        env:
+          INDEXNOW_KEY: 9f4d0c7a2e6b4f8a91d3c5e7b0a2468f
+        run: |
+          curl --fail-with-body --silent --show-error \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -X POST 'https://api.indexnow.org/indexnow' \
+            --data "{\"host\":\"spencertracybrown.com\",\"key\":\"${INDEXNOW_KEY}\",\"keyLocation\":\"https://spencertracybrown.com/${INDEXNOW_KEY}.txt\",\"urlList\":[\"https://spencertracybrown.com/\"]}"
