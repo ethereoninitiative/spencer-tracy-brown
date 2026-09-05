@@ -67,6 +67,7 @@ dt{margin-bottom:.2rem;color:var(--cobalt)}dd{margin:0}
 
 .about-section{display:grid;grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr);gap:clamp(2rem,5vw,5rem);align-items:center}
 .about-copy p{max-width:720px;font-size:1.05rem;line-height:1.8}
+.about-copy::before{content:"";float:right;width:min(42%,18rem);aspect-ratio:4/5;margin:.2rem 0 1.4rem 1.5rem;border:2px solid var(--ink);box-shadow:.45rem .45rem 0 var(--ink);background:url("../images/spencer-studio-process.jpg") center/cover no-repeat}
 .tag-list{list-style:none;padding:0;margin:1.75rem 0 0;display:flex;gap:.6rem;flex-wrap:wrap}
 .tag-list li{padding:.45rem .68rem;border:1px solid var(--line-strong);border-radius:999px;color:var(--cobalt);background:rgba(255,255,255,.34);font-size:.82rem;font-weight:700}
 
@@ -99,6 +100,7 @@ dt{margin-bottom:.2rem;color:var(--cobalt)}dd{margin:0}
   .boundary-mark-heading{font-size:0}
   .boundary-mark-heading img{width:min(100%,42rem)}
   .hero-art .art-frame{min-height:24rem}
+  .about-copy::before{float:none;display:block;width:min(100%,22rem);margin:0 0 1.5rem 0}
   .credential-strip div{border-right:0;border-bottom:1px solid var(--line)}.credential-strip div:last-child{border-bottom:0}
 }
 @media(max-width:560px){:root{--gutter:.85rem}.site-nav a{font-size:.7rem}.cover{padding-top:2.2rem}h1{font-size:clamp(3.4rem,20vw,5.6rem)}.boundary-mark-heading{font-size:0}.boundary-mark-heading img{width:100%}}
