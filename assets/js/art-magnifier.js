@@ -1,16 +1,78 @@
 (() => {
   const cvActions = document.querySelector('.cv-actions');
   if (cvActions && !cvActions.querySelector('[data-press-archive]')) {
-    const pressLink = document.createElement('a');
-    pressLink.className = 'cv-link';
-    pressLink.href = 'https://www.statepress.com/article/2015/02/bent-realities-offers-quirky-and-emotional-expression-by-asu-seniors';
-    pressLink.target = '_blank';
-    pressLink.rel = 'noopener';
-    pressLink.dataset.pressArchive = 'true';
-    pressLink.textContent = '2015 State Press ↗';
-    pressLink.setAttribute('aria-label', 'Read 2015 State Press coverage of Bent Realities');
-    cvActions.appendChild(pressLink);
+    const archive = document.createElement('div');
+    archive.className = 'press-archive';
+    archive.dataset.pressArchive = 'true';
+    archive.setAttribute('aria-label', 'Selected press and archive');
+    archive.innerHTML = `
+      <p class="press-archive-label">Selected press / archive</p>
+      <div class="press-archive-links">
+        <a class="press-archive-link" href="https://www.tucsonlocalmedia.com/marana/news/funky-new-art-studio-opens-in-marana/article_97ed7798-42ff-11ef-9702-1fb1676f9e1c.html" target="_blank" rel="noopener">
+          <span class="press-archive-meta">2024 · Marana News</span>
+          <span class="press-archive-title">Funky new art studio opens in Marana ↗</span>
+        </a>
+        <a class="press-archive-link" href="https://www.statepress.com/article/2015/02/bent-realities-offers-quirky-and-emotional-expression-by-asu-seniors" target="_blank" rel="noopener">
+          <span class="press-archive-meta">2015 · The State Press</span>
+          <span class="press-archive-title">Bent Realities offers quirky and emotional expression by ASU seniors ↗</span>
+        </a>
+      </div>
+    `;
+    cvActions.appendChild(archive);
   }
+
+  const siteEnhancementStyle = document.createElement('style');
+  siteEnhancementStyle.textContent = `
+    .cv-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 1.1rem 1.4rem;
+    }
+    .press-archive {
+      flex: 1 1 31rem;
+      min-width: min(100%, 24rem);
+      padding-top: .75rem;
+      border-top: 1px solid var(--line-strong, rgba(23,20,19,.36));
+    }
+    .press-archive-label {
+      margin: 0 0 .35rem;
+      color: var(--cobalt, #123f78) !important;
+      font-size: .68rem !important;
+      font-weight: 800;
+      line-height: 1.3 !important;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .press-archive-links { display: grid; }
+    .press-archive-link {
+      display: grid;
+      grid-template-columns: minmax(8.5rem, 10.5rem) minmax(0, 1fr);
+      gap: .45rem 1rem;
+      align-items: baseline;
+      padding: .7rem 0;
+      border-bottom: 1px solid var(--line, rgba(23,20,19,.16));
+      text-decoration: none;
+    }
+    .press-archive-meta {
+      color: var(--muted, #64574e);
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .press-archive-title {
+      font-family: var(--serif, Georgia, serif);
+      font-size: .98rem;
+      line-height: 1.35;
+    }
+    .press-archive-link:hover .press-archive-title,
+    .press-archive-link:focus-visible .press-archive-title { color: var(--cobalt, #123f78); }
+    @media (max-width: 560px) {
+      .press-archive-link { grid-template-columns: 1fr; gap: .2rem; }
+    }
+  `;
+  document.head.appendChild(siteEnhancementStyle);
 
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   if (!finePointer.matches) return;
