@@ -74,7 +74,10 @@ dt{margin-bottom:.2rem;color:var(--cobalt)}dd{margin:0}
 .about-copy>p:nth-of-type(4){grid-column:1;grid-row:5}
 .about-copy p{max-width:720px;font-size:1.05rem;line-height:1.8}
 .about-copy::before{content:"";grid-column:2;grid-row:3 / span 3;width:100%;aspect-ratio:4/5;border:2px solid var(--ink);box-shadow:.4rem .4rem 0 var(--ink);background:url("../images/spencer-studio-process.jpeg") center/cover no-repeat}
-.tag-list{grid-column:1/-1;grid-row:6;list-style:none;padding:0;margin:1.75rem 0 0;display:flex;gap:.6rem;flex-wrap:wrap}
+.cv-actions{grid-column:1/-1;grid-row:6;margin:1.4rem 0 0}
+.cv-link{display:inline-flex;align-items:center;padding:.95rem 1.15rem;border:2px solid var(--ink);background:rgba(255,255,255,.36);box-shadow:.3rem .3rem 0 var(--ink);text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800}
+.cv-link:hover,.cv-link:focus-visible{background:var(--cobalt);color:#fff}
+.tag-list{grid-column:1/-1;grid-row:7;list-style:none;padding:0;margin:1.35rem 0 0;display:flex;gap:.6rem;flex-wrap:wrap}
 .tag-list li{padding:.45rem .68rem;border:1px solid var(--line-strong);border-radius:999px;color:var(--cobalt);background:rgba(255,255,255,.34);font-size:.82rem;font-weight:700}
 
 .practice-section{border-top:2px solid var(--ink)}
@@ -113,7 +116,8 @@ dt{margin-bottom:.2rem;color:var(--cobalt)}dd{margin:0}
   .about-copy>p:nth-of-type(2){grid-column:1;grid-row:4}
   .about-copy>p:nth-of-type(3){grid-column:1;grid-row:5}
   .about-copy>p:nth-of-type(4){grid-column:1;grid-row:6}
-  .tag-list{grid-column:1;grid-row:7}
+  .cv-actions{grid-column:1;grid-row:7}
+  .tag-list{grid-column:1;grid-row:8}
   .credential-strip div{border-right:0;border-bottom:1px solid var(--line)}.credential-strip div:last-child{border-bottom:0}
 }
 @media(max-width:560px){:root{--gutter:.85rem}.site-nav a{font-size:.7rem}.cover{padding-top:2.2rem}h1{font-size:clamp(3.4rem,20vw,5.6rem)}.boundary-mark-heading{font-size:0}.boundary-mark-heading img{width:100%}}
