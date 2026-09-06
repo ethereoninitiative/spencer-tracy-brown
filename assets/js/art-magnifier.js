@@ -1,4 +1,17 @@
 (() => {
+  const cvActions = document.querySelector('.cv-actions');
+  if (cvActions && !cvActions.querySelector('[data-press-archive]')) {
+    const pressLink = document.createElement('a');
+    pressLink.className = 'cv-link';
+    pressLink.href = 'https://www.statepress.com/article/2015/02/bent-realities-offers-quirky-and-emotional-expression-by-asu-seniors';
+    pressLink.target = '_blank';
+    pressLink.rel = 'noopener';
+    pressLink.dataset.pressArchive = 'true';
+    pressLink.textContent = '2015 State Press ↗';
+    pressLink.setAttribute('aria-label', 'Read 2015 State Press coverage of Bent Realities');
+    cvActions.appendChild(pressLink);
+  }
+
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   if (!finePointer.matches) return;
 
