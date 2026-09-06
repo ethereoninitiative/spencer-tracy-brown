@@ -12,6 +12,7 @@
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="bingbot" content="index, follow" />
   <link rel="canonical" href="https://spencertracybrown.com/" />
+  <link rel="me" href="https://www.linkedin.com/in/spencer-brown-23923b296" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://spencertracybrown.com/sitemap.xml" />
 
   <meta property="og:site_name" content="Spencer Tracy Brown" />
@@ -34,6 +35,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/enhancements.css" />
 
   <script type="application/ld+json">
   {
@@ -54,8 +56,18 @@
         "url": "https://spencertracybrown.com/",
         "name": "Spencer Tracy Brown — Artist, Sculptor & Creative Fabricator",
         "description": "Official portfolio of Spencer Tracy Brown, an Arizona-based artist, sculptor, creative fabricator, and educator.",
+        "keywords": [
+          "Spencer Tracy Brown",
+          "Spencer Brown",
+          "Arizona artist",
+          "Arizona sculptor",
+          "creative fabricator",
+          "fine arts educator",
+          "AI in education"
+        ],
         "isPartOf": { "@id": "https://spencertracybrown.com/#website" },
         "about": { "@id": "https://spencertracybrown.com/#person" },
+        "mainEntity": { "@id": "https://spencertracybrown.com/#person" },
         "primaryImageOfPage": {
           "@type": "ImageObject",
           "url": "https://spencertracybrown.com/assets/portfolio-canon-r1/hero-hanging-assemblage.png",
@@ -68,19 +80,64 @@
         "@type": "Person",
         "@id": "https://spencertracybrown.com/#person",
         "name": "Spencer Tracy Brown",
+        "alternateName": ["Spencer Brown", "Spencer T. Brown"],
         "url": "https://spencertracybrown.com/",
         "email": "mailto:suntoad@me.com",
         "image": "https://spencertracybrown.com/assets/portfolio-canon-r1/hero-hanging-assemblage.png",
         "jobTitle": "Artist, Sculptor, Creative Fabricator, and Educator",
-        "description": "Arizona-based artist, sculptor, creative fabricator, and educator working across sculpture, ceramics, mixed media, installation, public art, scenic fabrication, and creative environments.",
+        "description": "Arizona-based artist, sculptor, creative fabricator, and educator working across sculpture, ceramics, mixed media, installation, public art, scenic fabrication, creative environments, and arts education.",
+        "disambiguatingDescription": "Spencer Tracy Brown, also professionally known as Spencer Brown, is an Arizona-based visual artist, sculptor, creative fabricator, arts educator, and Arizona State University alumnus associated with the Phoenix metropolitan area and Agua Fria Union High School District.",
+        "sameAs": [
+          "https://www.linkedin.com/in/spencer-brown-23923b296"
+        ],
         "homeLocation": {
           "@type": "Place",
           "name": "Phoenix metropolitan area, Arizona"
         },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Agua Fria Union High School District",
+          "alternateName": "Agua Fria High School District",
+          "url": "https://www.aguafria.org/"
+        },
         "alumniOf": {
           "@type": "CollegeOrUniversity",
-          "name": "Arizona State University"
+          "name": "Arizona State University",
+          "url": "https://www.asu.edu/"
         },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Bachelor of Fine Arts — Fine Arts, Sculptural Emphasis",
+            "credentialCategory": "degree",
+            "recognizedBy": {
+              "@type": "CollegeOrUniversity",
+              "name": "Arizona State University",
+              "url": "https://www.asu.edu/"
+            }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Master of Education — Elementary Education",
+            "credentialCategory": "degree",
+            "recognizedBy": {
+              "@type": "CollegeOrUniversity",
+              "name": "Arizona State University",
+              "url": "https://www.asu.edu/"
+            }
+          }
+        ],
+        "hasOccupation": [
+          { "@type": "Occupation", "name": "Visual Artist" },
+          { "@type": "Occupation", "name": "Sculptor" },
+          { "@type": "Occupation", "name": "Creative Fabricator" },
+          { "@type": "Occupation", "name": "Fine Arts Educator" }
+        ],
+        "subjectOf": [
+          { "@id": "https://spencertracybrown.com/#press-ktar-2025" },
+          { "@id": "https://spencertracybrown.com/#press-marana-2024" },
+          { "@id": "https://spencertracybrown.com/#press-statepress-2015" }
+        ],
         "knowsAbout": [
           "Sculpture",
           "Ceramics",
@@ -91,9 +148,40 @@
           "Scenic Fabrication",
           "Visual Communication",
           "Creative Leadership",
-          "Arts Education"
+          "Arts Education",
+          "Artificial Intelligence in Education"
         ],
         "mainEntityOfPage": { "@id": "https://spencertracybrown.com/#webpage" }
+      },
+      {
+        "@type": "NewsArticle",
+        "@id": "https://spencertracybrown.com/#press-ktar-2025",
+        "url": "https://ktar.com/arizona-education/ai-teachers-chatgpt-lessons",
+        "headline": "AI and ChatGPT are forcing Arizona teachers to rethink lessons",
+        "datePublished": "2025-11-13",
+        "author": { "@type": "Person", "name": "Shira Tanzer" },
+        "publisher": { "@type": "Organization", "name": "KTAR News 92.3 FM" },
+        "about": { "@id": "https://spencertracybrown.com/#person" }
+      },
+      {
+        "@type": "NewsArticle",
+        "@id": "https://spencertracybrown.com/#press-marana-2024",
+        "url": "https://www.tucsonlocalmedia.com/marana/news/funky-new-art-studio-opens-in-marana/article_97ed7798-42ff-11ef-9702-1fb1676f9e1c.html",
+        "headline": "Funky new art studio opens in Marana",
+        "datePublished": "2024-07-17",
+        "author": { "@type": "Person", "name": "Nikki Link" },
+        "publisher": { "@type": "Organization", "name": "Marana News" },
+        "about": { "@id": "https://spencertracybrown.com/#person" }
+      },
+      {
+        "@type": "NewsArticle",
+        "@id": "https://spencertracybrown.com/#press-statepress-2015",
+        "url": "https://www.statepress.com/article/2015/02/bent-realities-offers-quirky-and-emotional-expression-by-asu-seniors",
+        "headline": "Bent Realities offers quirky and emotional expression by ASU seniors",
+        "datePublished": "2015-02-18",
+        "author": { "@type": "Person", "name": "Celina Jimenez" },
+        "publisher": { "@type": "Organization", "name": "The State Press" },
+        "about": { "@id": "https://spencertracybrown.com/#person" }
       }
     ]
   }
@@ -234,6 +322,30 @@
         <p>Whether I’m building an object, a studio, a course, or a collaborative environment, the underlying impulse is the same: create conditions in which ideas can become tangible and people can make things that did not exist before.</p>
         <div class="cv-actions">
           <a class="cv-link" href="assets/docs/Spencer-Tracy-Brown-CV.pdf" target="_blank" rel="noopener">View CV ↗</a>
+          <div class="press-archive" data-press-archive="true" aria-label="Selected press, archive, and recognition">
+            <p class="press-archive-label">Selected press / archive</p>
+            <div class="press-archive-links">
+              <a class="press-archive-link" href="https://ktar.com/arizona-education/ai-teachers-chatgpt-lessons" target="_blank" rel="noopener">
+                <span class="press-archive-meta">2025 · KTAR News 92.3 FM</span>
+                <span class="press-archive-title">AI and ChatGPT are forcing Arizona teachers to rethink lessons ↗</span>
+              </a>
+              <a class="press-archive-link" href="https://www.tucsonlocalmedia.com/marana/news/funky-new-art-studio-opens-in-marana/article_97ed7798-42ff-11ef-9702-1fb1676f9e1c.html" target="_blank" rel="noopener">
+                <span class="press-archive-meta">2024 · Marana News</span>
+                <span class="press-archive-title">Funky new art studio opens in Marana ↗</span>
+              </a>
+              <a class="press-archive-link" href="https://www.statepress.com/article/2015/02/bent-realities-offers-quirky-and-emotional-expression-by-asu-seniors" target="_blank" rel="noopener">
+                <span class="press-archive-meta">2015 · The State Press</span>
+                <span class="press-archive-title">Bent Realities offers quirky and emotional expression by ASU seniors ↗</span>
+              </a>
+            </div>
+            <p class="press-archive-label recognition-label">Recognition / features</p>
+            <div class="press-archive-links">
+              <a class="press-archive-link" href="https://www.facebook.com/GoodyearHighSchoolMavericks/posts/congrats-to-our-art-teacher-mr-spencer-brown-he-was-selected-for-the-first-ever-/122186693786332919/" target="_blank" rel="noopener">
+                <span class="press-archive-meta">2025 · Goodyear High School</span>
+                <span class="press-archive-title">Selected for the first ChatGPT Lab for High School Teachers — national cohort of 12 educators ↗</span>
+              </a>
+            </div>
+          </div>
         </div>
         <ul class="tag-list" aria-label="Artist and practice keywords">
           <li>visual artist</li><li>sculptor</li><li>ceramics</li><li>creative fabrication</li><li>installation</li><li>visual communication</li><li>creative leadership</li><li>educator</li>
