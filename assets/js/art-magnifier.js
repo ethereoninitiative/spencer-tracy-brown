@@ -8,6 +8,10 @@
     archive.innerHTML = `
       <p class="press-archive-label">Selected press / archive</p>
       <div class="press-archive-links">
+        <a class="press-archive-link" href="https://ktar.com/arizona-education/ai-teachers-chatgpt-lessons" target="_blank" rel="noopener">
+          <span class="press-archive-meta">2025 · KTAR News 92.3 FM</span>
+          <span class="press-archive-title">AI and ChatGPT are forcing Arizona teachers to rethink lessons ↗</span>
+        </a>
         <a class="press-archive-link" href="https://www.tucsonlocalmedia.com/marana/news/funky-new-art-studio-opens-in-marana/article_97ed7798-42ff-11ef-9702-1fb1676f9e1c.html" target="_blank" rel="noopener">
           <span class="press-archive-meta">2024 · Marana News</span>
           <span class="press-archive-title">Funky new art studio opens in Marana ↗</span>
