@@ -21,4 +21,4 @@ jobs:
           curl --fail-with-body --silent --show-error \
             -H 'Content-Type: application/json; charset=utf-8' \
             -X POST 'https://api.indexnow.org/indexnow' \
-            --data "{\"host\":\"spencertracybrown.com\",\"key\":\"${INDEXNOW_KEY}\",\"keyLocation\":\"https://spencertracybrown.com/${INDEXNOW_KEY}.txt\",\"urlList\":[\"https://spencertracybrown.com/\"]}"
+            --data "{\"host\":\"spencertracybrown.com\",\"key\":\"${INDEXNOW_KEY}\",\"keyLocation\":\"https://spencertracybrown.com/${INDEXNOW_KEY}.txt\",\"urlList\":[\"https://spencertracybrown.com/\",\"https://spencertracybrown.com/spencer-tracy-brown/\",\"https://spencertracybrown.com/sitemap.xml\"]}"
