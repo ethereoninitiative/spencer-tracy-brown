@@ -5,6 +5,9 @@
 ## Canonical site
 - https://spencertracybrown.com/
 
+## Curriculum vitae
+- https://spencertracybrown.com/assets/docs/Spencer-Tracy-Brown-CV.pdf
+
 ## Practice
 - Sculpture and installation
 - Ceramics and material studies
@@ -22,4 +25,4 @@ Spencer Tracy Brown works across physical objects, images, constructed environme
 - Location: Phoenix metropolitan area, Arizona
 
 ## Source of truth
-The canonical homepage and its linked assets are the authoritative public source for portfolio information.
+The canonical homepage, public curriculum vitae, and linked portfolio assets are the authoritative public sources for professional and portfolio information.
