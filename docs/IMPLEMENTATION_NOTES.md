@@ -2,22 +2,22 @@
 
 ## Critical content should not depend on the art magnifier script
 
-`assets/js/art-magnifier.js` currently does more than magnifier behavior: it injects the Selected Press / Archive and Recognition / Features markup and their styles into the About section at runtime.
+Historical note: `assets/js/art-magnifier.js` previously did more than magnifier behavior. It injected the Selected Press / Archive and Recognition / Features markup and their styles into the About section at runtime.
 
-This creates a visibility and verification hazard. If the script is cached, blocked, fails before the DOM enhancement runs, or a browser serves an older asset while `index.html` has already deployed, press and recognition content can appear missing or stale even though the repository update is correct.
+That created a visibility and verification hazard. If the script was cached, blocked, failed before the DOM enhancement ran, or a browser served an older asset while `index.html` had already deployed, press and recognition content could appear missing or stale even though the repository update was correct.
 
 ### Rule for future edits
 
 When adding or changing content that should reliably exist in the document:
 
 - Prefer semantic markup in `index.html`.
-- Prefer presentation rules in `assets/css/styles.css`.
+- Prefer presentation rules in CSS assets.
 - Keep `assets/js/art-magnifier.js` focused on magnifier behavior and nonessential progressive enhancement.
-- If content must temporarily remain JS-injected, verify the live site after deployment with cache behavior in mind before diagnosing the change as failed.
+- If content is ever temporarily JS-injected again, verify the live site after deployment with cache behavior in mind before diagnosing the change as failed.
 - Check both desktop and mobile stacking because the press/archive layout changes from two-column rows to a single-column presentation on narrow screens.
 
-### Current cleanup target
+### Cleanup status
 
-Migrate the Selected Press / Archive and Recognition / Features markup out of `art-magnifier.js` into `index.html`, migrate the related CSS into `assets/css/styles.css`, and then remove the corresponding DOM/style injection from the magnifier script without changing the visible hierarchy.
+Resolved on 2026-09-06. Selected Press / Archive and Recognition / Features now live directly in `index.html`; their presentation lives in `assets/css/enhancements.css`; and `assets/js/art-magnifier.js` is behavior-only.
 
 The design intent remains: artwork and practice are primary; press and recognition are quiet provenance, not a resume wall.
