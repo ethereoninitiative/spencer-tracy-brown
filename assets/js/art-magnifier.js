@@ -1,4 +1,72 @@
 (() => {
+  const CV_PATH = 'assets/docs/Spencer-Tracy-Brown-CV.pdf';
+
+  const cvStyle = document.createElement('style');
+  cvStyle.textContent = `
+    .cv-actions {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin: 1.15rem 0 0;
+    }
+    .cv-action {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.75rem;
+      padding: .72rem .95rem;
+      border: 2px solid var(--ink, #171413);
+      background: rgba(255,255,255,.3);
+      color: var(--ink, #171413);
+      text-decoration: none;
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      box-shadow: .22rem .22rem 0 var(--ink, #171413);
+    }
+    .cv-action:hover,
+    .cv-action:focus-visible {
+      background: var(--cobalt, #123f78);
+      color: #fff;
+    }
+  `;
+  document.head.appendChild(cvStyle);
+
+  const nav = document.querySelector('.site-nav');
+  if (nav && !nav.querySelector('[data-cv-nav]')) {
+    const cvNav = document.createElement('a');
+    cvNav.href = CV_PATH;
+    cvNav.target = '_blank';
+    cvNav.rel = 'noopener';
+    cvNav.dataset.cvNav = 'true';
+    cvNav.textContent = 'CV';
+    nav.appendChild(cvNav);
+  }
+
+  const about = document.querySelector('.about-copy');
+  const tagList = about?.querySelector('.tag-list');
+  if (about && tagList && !about.querySelector('.cv-actions')) {
+    const actions = document.createElement('div');
+    actions.className = 'cv-actions';
+
+    const view = document.createElement('a');
+    view.className = 'cv-action';
+    view.href = CV_PATH;
+    view.target = '_blank';
+    view.rel = 'noopener';
+    view.textContent = 'View CV ↗';
+
+    const download = document.createElement('a');
+    download.className = 'cv-action';
+    download.href = CV_PATH;
+    download.setAttribute('download', 'Spencer-Tracy-Brown-CV.pdf');
+    download.textContent = 'Download PDF ↓';
+
+    actions.append(view, download);
+    tagList.insertAdjacentElement('afterend', actions);
+  }
+
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   if (!finePointer.matches) return;
 
