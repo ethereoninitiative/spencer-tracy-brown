@@ -4,7 +4,7 @@
     const archive = document.createElement('div');
     archive.className = 'press-archive';
     archive.dataset.pressArchive = 'true';
-    archive.setAttribute('aria-label', 'Selected press and archive');
+    archive.setAttribute('aria-label', 'Selected press, archive, and recognition');
     archive.innerHTML = `
       <p class="press-archive-label">Selected press / archive</p>
       <div class="press-archive-links">
@@ -15,6 +15,13 @@
         <a class="press-archive-link" href="https://www.statepress.com/article/2015/02/bent-realities-offers-quirky-and-emotional-expression-by-asu-seniors" target="_blank" rel="noopener">
           <span class="press-archive-meta">2015 · The State Press</span>
           <span class="press-archive-title">Bent Realities offers quirky and emotional expression by ASU seniors ↗</span>
+        </a>
+      </div>
+      <p class="press-archive-label recognition-label">Recognition / features</p>
+      <div class="press-archive-links">
+        <a class="press-archive-link" href="https://www.facebook.com/GoodyearHighSchoolMavericks/posts/congrats-to-our-art-teacher-mr-spencer-brown-he-was-selected-for-the-first-ever-/122186693786332919/" target="_blank" rel="noopener">
+          <span class="press-archive-meta">2025 · Goodyear High School</span>
+          <span class="press-archive-title">Selected for the first ChatGPT Lab for High School Teachers — national cohort of 12 educators ↗</span>
         </a>
       </div>
     `;
@@ -44,6 +51,7 @@
       letter-spacing: .14em;
       text-transform: uppercase;
     }
+    .recognition-label { margin-top: 1.15rem; }
     .press-archive-links { display: grid; }
     .press-archive-link {
       display: grid;
