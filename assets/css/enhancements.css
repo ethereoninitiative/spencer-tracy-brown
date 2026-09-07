@@ -219,6 +219,7 @@
 
 @media (max-width: 900px) {
   .practice-grid { grid-template-columns: 1fr; }
+  .practice-card:nth-child(3) { width: 100%; margin-top: 0; }
   .practice-card-featured {
     grid-column: auto;
     grid-template-columns: 1fr;
