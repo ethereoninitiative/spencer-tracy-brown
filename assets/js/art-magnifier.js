@@ -1,4 +1,28 @@
 (() => {
+  const studioCard = document.querySelector('.practice-grid .practice-card:first-child');
+
+  if (studioCard && !studioCard.querySelector('.studio-fabrication-art')) {
+    studioCard.classList.add('practice-card-featured');
+
+    const figure = document.createElement('figure');
+    figure.className = 'art-figure practice-art studio-fabrication-art';
+
+    const frame = document.createElement('div');
+    frame.className = 'art-frame';
+
+    const img = document.createElement('img');
+    img.src = 'assets/images/obsidian-horned-skull.webp';
+    img.alt = 'Ceramic skull sculpture with glossy black organic horn-like forms';
+    img.width = 1122;
+    img.height = 1402;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+
+    frame.appendChild(img);
+    figure.appendChild(frame);
+    studioCard.appendChild(figure);
+  }
+
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   if (!finePointer.matches) return;
 
