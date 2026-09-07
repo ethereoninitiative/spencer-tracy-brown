@@ -165,3 +165,47 @@
     gap: .2rem;
   }
 }
+
+/* Studio & Fabrication: pair the practice copy with one representative object. */
+.practice-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.practice-grid > .practice-card:first-child {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, .9fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+  padding: clamp(1.35rem, 2.5vw, 2rem);
+}
+
+.practice-card-copy { min-width: 0; }
+
+.practice-art {
+  width: 100%;
+  max-width: 34rem;
+  justify-self: end;
+}
+
+.practice-art .art-frame {
+  aspect-ratio: 4 / 5;
+  box-shadow: .45rem .45rem 0 var(--ink, #171413);
+}
+
+@media (max-width: 900px) {
+  .practice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-grid > .practice-card:first-child {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  .practice-art {
+    max-width: none;
+    justify-self: stretch;
+  }
+}
