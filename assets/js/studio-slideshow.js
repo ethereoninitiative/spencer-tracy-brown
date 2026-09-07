@@ -97,6 +97,25 @@
     schedule();
   };
 
+  const ceramicsCard = document.querySelector('.work-grid .work-card:nth-child(2)');
+  if (ceramicsCard && !ceramicsCard.querySelector('.ceramics-supporting-art')) {
+    const meta = ceramicsCard.querySelector('.work-meta');
+    if (meta) {
+      const figure = document.createElement('figure');
+      figure.className = 'ceramics-supporting-art';
+
+      const img = document.createElement('img');
+      img.src = 'assets/images/Handcrafted-Teal-and-Forest-Green-Teapot.jpeg';
+      img.alt = 'Handcrafted ceramic teapot with layered teal, forest green, turquoise, burgundy, and earthy glaze.';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.addEventListener('error', () => { figure.hidden = true; });
+
+      figure.appendChild(img);
+      meta.appendChild(figure);
+    }
+  }
+
   const fabricationCard = document.querySelector('.work-grid .work-card:nth-child(4)');
 
   if (fabricationCard && !fabricationCard.querySelector('.fabrication-study-slideshow')) {
