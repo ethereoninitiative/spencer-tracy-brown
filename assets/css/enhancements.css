@@ -14,15 +14,17 @@
   margin: clamp(1.4rem, 2.2vw, 2rem) 0 0;
 }
 
+.ceramics-supporting-art .art-frame {
+  aspect-ratio: 4 / 5;
+  box-shadow: .42rem .42rem 0 rgba(23,20,19,.18);
+}
+
 .ceramics-supporting-art img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
+  height: 100%;
   object-fit: cover;
-  border: 2px solid var(--ink, #171413);
   background: #e8dfd3;
-  box-shadow: .42rem .42rem 0 rgba(23,20,19,.18);
 }
 
 /* Object & Creative Fabrication: compact supporting slideshow beside the finished work. */
