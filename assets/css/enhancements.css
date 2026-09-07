@@ -10,7 +10,7 @@
   background-color: #e8dfd3;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   box-shadow: .38rem .38rem 0 rgba(23, 20, 19, .18);
 }
 
@@ -26,7 +26,7 @@
   .work-card:nth-child(4) {
     grid-template-columns: minmax(18rem, .84fr) minmax(0, 1.16fr);
     grid-template-rows: auto auto auto;
-    gap: .9rem clamp(1.8rem, 3vw, 2.8rem);
+    gap: .45rem clamp(1.8rem, 3vw, 2.8rem);
     align-items: start;
   }
 
@@ -34,20 +34,26 @@
     grid-column: 1;
     grid-row: 1;
     padding-top: 0;
-    margin-bottom: .15rem;
+    margin-bottom: 0;
+  }
+
+  .work-card:nth-child(4) .work-meta p:last-child {
+    margin-bottom: 0;
   }
 
   .work-card:nth-child(4)::before {
     grid-column: 1;
     grid-row: 2;
-    min-height: 17rem;
+    aspect-ratio: 3 / 4;
+    min-height: 0;
   }
 
   .work-card:nth-child(4)::after {
     grid-column: 1;
     grid-row: 3;
-    min-height: 15rem;
-    margin-top: .15rem;
+    aspect-ratio: 3 / 4;
+    min-height: 0;
+    margin-top: .1rem;
   }
 
   .work-card:nth-child(4) .art-figure {
@@ -66,11 +72,12 @@
   .work-card:nth-child(4) {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.1rem;
+    gap: .7rem;
   }
 
   .work-card:nth-child(4) .work-meta { order: 1; padding-top: .35rem; }
-  .work-card:nth-child(4)::before { order: 2; min-height: clamp(18rem, 92vw, 32rem); }
-  .work-card:nth-child(4)::after { order: 3; min-height: clamp(17rem, 88vw, 30rem); }
+  .work-card:nth-child(4) .work-meta p:last-child { margin-bottom: 0; }
+  .work-card:nth-child(4)::before { order: 2; aspect-ratio: 3 / 4; min-height: 0; }
+  .work-card:nth-child(4)::after { order: 3; aspect-ratio: 3 / 4; min-height: 0; }
   .work-card:nth-child(4) .art-figure { order: 4; }
 }
