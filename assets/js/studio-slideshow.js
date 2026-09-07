@@ -1,7 +1,7 @@
 (() => {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  const initSlideshow = (slideshow, interval = 6500) => {
+  const initSlideshow = (slideshow, interval = 4000) => {
     if (!slideshow) return;
     const slides = Array.from(slideshow.querySelectorAll("img"));
     if (slides.length < 2) return;
@@ -14,7 +14,7 @@
     const showSlide = (nextIndex) => {
       slides[activeIndex].classList.remove("is-active");
       slides[activeIndex].setAttribute("aria-hidden", "true");
-      activeIndex = nextIndex;
+      activeIndex = (nextIndex + slides.length) % slides.length;
       slides[activeIndex].classList.add("is-active");
       slides[activeIndex].setAttribute("aria-hidden", "false");
     };
@@ -28,10 +28,50 @@
       stop();
       if (reducedMotion.matches || hovered || focused || document.hidden) return;
       timer = window.setTimeout(() => {
-        showSlide((activeIndex + 1) % slides.length);
+        showSlide(activeIndex + 1);
         schedule();
       }, interval);
     };
+
+    if (!slideshow.querySelector('.slideshow-control')) {
+      const previous = document.createElement('button');
+      previous.type = 'button';
+      previous.className = 'slideshow-control slideshow-control-prev';
+      previous.setAttribute('aria-label', 'Previous image');
+      previous.innerHTML = '<span aria-hidden="true">‹</span>';
+
+      const next = document.createElement('button');
+      next.type = 'button';
+      next.className = 'slideshow-control slideshow-control-next';
+      next.setAttribute('aria-label', 'Next image');
+      next.innerHTML = '<span aria-hidden="true">›</span>';
+
+      previous.addEventListener('click', (event) => {
+        event.preventDefault();
+        stop();
+        showSlide(activeIndex - 1);
+      });
+
+      next.addEventListener('click', (event) => {
+        event.preventDefault();
+        stop();
+        showSlide(activeIndex + 1);
+      });
+
+      slideshow.append(previous, next);
+    }
+
+    slideshow.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        stop();
+        showSlide(activeIndex - 1);
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        stop();
+        showSlide(activeIndex + 1);
+      }
+    });
 
     slideshow.addEventListener("mouseenter", () => { hovered = true; stop(); });
     slideshow.addEventListener("mouseleave", () => { hovered = false; schedule(); });
@@ -92,11 +132,11 @@
 
       const meta = fabricationCard.querySelector('.work-meta');
       if (meta) meta.insertAdjacentElement('afterend', slideshow);
-      initSlideshow(slideshow, 5200);
+      initSlideshow(slideshow, 3200);
     };
 
     buildFabricationSlideshow();
   }
 
-  initSlideshow(document.querySelector("[data-studio-slideshow]"), 6500);
+  initSlideshow(document.querySelector("[data-studio-slideshow]"), 3800);
 })();
