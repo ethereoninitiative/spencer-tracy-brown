@@ -28,9 +28,10 @@
 
   const ZOOM = 2.2;
 
-  document.querySelectorAll('.art-frame > img').forEach((img) => {
+  const enableMagnifier = (img) => {
+    if (!(img instanceof HTMLImageElement)) return;
     const frame = img.parentElement;
-    if (!frame || frame.dataset.magnifierReady === 'true') return;
+    if (!frame || !frame.classList.contains('art-frame') || frame.dataset.magnifierReady === 'true') return;
 
     const lens = document.createElement('div');
     lens.className = 'art-magnifier-lens';
@@ -67,5 +68,23 @@
     frame.addEventListener('pointerleave', () => {
       frame.classList.remove('magnifier-active');
     });
+  };
+
+  const scanForMagnifiers = (root = document) => {
+    root.querySelectorAll?.('.art-frame > img').forEach(enableMagnifier);
+  };
+
+  scanForMagnifiers();
+
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      for (const node of mutation.addedNodes) {
+        if (!(node instanceof Element)) continue;
+        if (node.matches?.('.art-frame > img')) enableMagnifier(node);
+        scanForMagnifiers(node);
+      }
+    }
   });
+
+  observer.observe(document.body, { childList: true, subtree: true });
 })();
