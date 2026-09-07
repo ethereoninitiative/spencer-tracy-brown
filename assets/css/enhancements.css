@@ -134,8 +134,7 @@
 
 .practice-card:nth-child(3) {
   grid-column: 1 / -1;
-  justify-self: center;
-  width: min(84%, 72rem);
+  width: 100%;
   margin-top: clamp(1.2rem, 2vw, 2rem);
 }
 
