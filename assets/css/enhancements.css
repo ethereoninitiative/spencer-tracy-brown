@@ -1,5 +1,30 @@
 @import url("enhancements-base.css");
 
+/* Ceramics & Material Studies: supporting teapot image beneath the text. */
+.work-card:nth-child(2) {
+  align-items: start;
+}
+
+.work-card:nth-child(2) .work-meta {
+  align-self: start;
+}
+
+.ceramics-supporting-art {
+  width: min(72%, 22rem);
+  margin: clamp(1.4rem, 2.2vw, 2rem) 0 0;
+}
+
+.ceramics-supporting-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 2px solid var(--ink, #171413);
+  background: #e8dfd3;
+  box-shadow: .42rem .42rem 0 rgba(23,20,19,.18);
+}
+
 /* Object & Creative Fabrication: compact supporting slideshow beside the finished work. */
 .work-card:nth-child(4)::before,
 .work-card:nth-child(4)::after { content: none; }
@@ -77,6 +102,10 @@
 }
 
 @media (min-width: 901px) {
+  .work-card:nth-child(2) .work-meta {
+    padding-top: .35rem;
+  }
+
   .work-card:nth-child(4) {
     grid-template-columns: minmax(18rem, .82fr) minmax(0, 1.18fr);
     grid-template-rows: auto;
@@ -113,6 +142,10 @@
 }
 
 @media (max-width: 900px) {
+  .ceramics-supporting-art {
+    width: min(68%, 20rem);
+  }
+
   .work-card:nth-child(4) {
     display: grid;
     grid-template-columns: 1fr;
@@ -130,6 +163,11 @@
 }
 
 @media (max-width: 560px) {
+  .ceramics-supporting-art {
+    width: min(78%, 18rem);
+    margin-top: 1.25rem;
+  }
+
   .fabrication-study-slideshow { width: min(72%, 16.5rem); }
   .slideshow-control {
     width: 2.35rem;
