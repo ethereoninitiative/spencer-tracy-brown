@@ -74,7 +74,7 @@ dt{margin-bottom:.2rem;color:var(--cobalt)}dd{margin:0}
 .about-copy>p:nth-of-type(3){grid-column:1;grid-row:4}
 .about-copy>p:nth-of-type(4){grid-column:1;grid-row:5}
 .about-copy p{max-width:720px;font-size:1.05rem;line-height:1.8}
-.about-copy::before{content:"";grid-column:2;grid-row:3 / span 3;width:100%;aspect-ratio:4/5;border:2px solid var(--ink);box-shadow:.4rem .4rem 0 var(--ink);background:url("../images/spencer-studio-process.webp") center/cover no-repeat}
+.about-photo-stack{grid-column:2;grid-row:3 / span 3;display:grid;gap:1.15rem;width:100%;align-self:start}.about-photo-stack figure{margin:0}.about-photo-stack img{width:100%;aspect-ratio:4/5;object-fit:cover;border:2px solid var(--ink);box-shadow:.4rem .4rem 0 var(--ink)}
 .cv-actions{grid-column:1/-1;grid-row:6;margin:1.4rem 0 0}
 .cv-link{display:inline-flex;align-items:center;padding:.95rem 1.15rem;border:2px solid var(--ink);background:rgba(255,255,255,.36);box-shadow:.3rem .3rem 0 var(--ink);text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800}
 .cv-link:hover,.cv-link:focus-visible{background:var(--cobalt);color:#fff}
@@ -113,7 +113,7 @@ dt{margin-bottom:.2rem;color:var(--cobalt)}dd{margin:0}
   .about-copy{grid-template-columns:1fr}
   .about-copy>.overline{grid-column:1;grid-row:1}
   .about-copy>h2{grid-column:1;grid-row:2;max-width:none;font-size:clamp(2.6rem,10vw,4.2rem)}
-  .about-copy::before{grid-column:1;grid-row:3;width:min(10rem,42vw);margin:0 0 1.35rem 0}
+  .about-photo-stack{grid-column:1;grid-row:3;width:min(10rem,42vw);margin:0 0 1.35rem 0}
   .about-copy>p:nth-of-type(2){grid-column:1;grid-row:4}
   .about-copy>p:nth-of-type(3){grid-column:1;grid-row:5}
   .about-copy>p:nth-of-type(4){grid-column:1;grid-row:6}
