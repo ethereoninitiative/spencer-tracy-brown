@@ -1,9 +1,8 @@
 .cv-actions {
   display: grid;
-  grid-template-columns: minmax(14rem, .42fr) minmax(0, 1fr);
-  grid-template-rows: auto 1fr;
-  gap: 1rem clamp(1.6rem, 3vw, 2.6rem);
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: .85rem 1rem;
+  align-items: end;
 }
 
 .cv-actions > .cv-link {
@@ -15,11 +14,21 @@
   box-shadow: .24rem .24rem 0 var(--ink, #171413);
 }
 
+.about-section > .about-art {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.about-section > .about-copy {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
 .cv-archive-art {
   grid-column: 1;
-  grid-row: 1 / span 2;
-  width: clamp(20rem, 24vw, 27rem);
-  max-width: none;
+  grid-row: 2;
+  width: min(100%, 27rem);
+  margin-top: clamp(1.5rem, 2.5vw, 2.25rem);
   align-self: start;
   justify-self: start;
 }
@@ -34,7 +43,7 @@
 }
 
 .press-archive {
-  grid-column: 2;
+  grid-column: 1 / -1;
   grid-row: 2;
   width: 100%;
   min-width: 0;
@@ -228,10 +237,6 @@
 }
 
 @media (min-width: 901px) {
-  .cv-archive-art {
-    margin-left: clamp(-9rem, -8vw, -6rem);
-  }
-
   .work-card:not(.large-card) {
     grid-column: 1 / -1;
     display: grid;
@@ -284,6 +289,18 @@
 }
 
 @media (max-width: 900px) {
+  .about-section > .about-art,
+  .about-section > .about-copy,
+  .cv-archive-art {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .cv-archive-art {
+    width: min(78%, 22rem);
+    margin: 1.4rem 0 1rem;
+  }
+
   .practice-grid { grid-template-columns: 1fr; }
   .practice-card:nth-child(3) { width: 100%; margin-top: 0; }
   .practice-card-featured {
@@ -307,20 +324,14 @@
     grid-template-columns: 1fr;
     align-items: start;
   }
-  .cv-archive-art {
-    grid-column: 1;
-    grid-row: 1;
-    width: min(78%, 20rem);
-    margin: 0 0 .35rem;
-  }
   .cv-actions > .cv-link {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 1;
     justify-self: start;
   }
   .press-archive {
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 2;
   }
 }
 
