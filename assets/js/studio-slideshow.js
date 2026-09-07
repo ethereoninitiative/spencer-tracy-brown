@@ -1,4 +1,23 @@
 (() => {
+  const fabricationCard = document.querySelector('.work-grid .work-card:nth-child(4)');
+
+  if (fabricationCard) {
+    const loadFabricationImage = async (source, property) => {
+      try {
+        const response = await fetch(source, { cache: 'no-store' });
+        if (!response.ok) return;
+        const base64 = (await response.text()).trim();
+        if (!base64) return;
+        fabricationCard.style.setProperty(property, `url("data:image/webp;base64,${base64}")`);
+      } catch (error) {
+        console.warn('Could not load fabrication study image.', error);
+      }
+    };
+
+    loadFabricationImage('assets/images/process-thumb-base64.txt', '--fabrication-process-image');
+    loadFabricationImage('assets/images/reflection-thumb-base64.txt', '--fabrication-reflection-image');
+  }
+
   const slideshow = document.querySelector("[data-studio-slideshow]");
   if (!slideshow) return;
 
