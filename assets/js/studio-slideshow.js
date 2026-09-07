@@ -102,7 +102,10 @@
     const meta = ceramicsCard.querySelector('.work-meta');
     if (meta) {
       const figure = document.createElement('figure');
-      figure.className = 'ceramics-supporting-art';
+      figure.className = 'art-figure ceramics-supporting-art';
+
+      const frame = document.createElement('div');
+      frame.className = 'art-frame';
 
       const img = document.createElement('img');
       img.src = 'assets/images/Handcrafted-Teal-and-Forest-Green-Teapot.jpeg';
@@ -111,7 +114,8 @@
       img.decoding = 'async';
       img.addEventListener('error', () => { figure.hidden = true; });
 
-      figure.appendChild(img);
+      frame.appendChild(img);
+      figure.appendChild(frame);
       meta.appendChild(figure);
     }
   }
