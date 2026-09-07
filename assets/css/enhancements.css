@@ -196,6 +196,38 @@
   .studio-slideshow img { transition: none; }
 }
 
+@media (min-width: 901px) {
+  .work-card:not(.large-card) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(2.5rem, 5vw, 5rem);
+    align-items: center;
+  }
+
+  .work-card:not(.large-card) .work-meta { padding-top: 0; }
+
+  .work-card:not(.large-card):nth-child(even) .work-meta {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .work-card:not(.large-card):nth-child(even) .art-figure {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .work-card:not(.large-card):nth-child(odd) .art-figure {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .work-card:not(.large-card):nth-child(odd) .work-meta {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .art-frame[data-magnifier-ready="true"] { cursor: zoom-in; }
   .art-magnifier-lens {
