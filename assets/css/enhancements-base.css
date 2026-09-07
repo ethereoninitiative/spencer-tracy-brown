@@ -205,7 +205,7 @@
   display: block;
   width: min(84%, 72rem);
   aspect-ratio: 4 / 3;
-  margin: 0 auto .35rem;
+  margin: clamp(2.8rem, 4.2vw, 4.25rem) auto .35rem;
   overflow: hidden;
   isolation: isolate;
   border: 2px solid var(--ink, #171413);
@@ -314,7 +314,7 @@
   .studio-fabrication-art { margin-top: .55rem; }
   .studio-slideshow {
     width: 100%;
-    margin-top: 1.2rem;
+    margin-top: 2rem;
     box-shadow: .35rem .35rem 0 rgba(23, 20, 19, .12);
   }
 }
