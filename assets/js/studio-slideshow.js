@@ -60,45 +60,42 @@
   const fabricationCard = document.querySelector('.work-grid .work-card:nth-child(4)');
 
   if (fabricationCard && !fabricationCard.querySelector('.fabrication-study-slideshow')) {
-    const sources = [
-      {
-        file: 'assets/images/process-thumb-base64.txt',
-        alt: 'Raw clay in-process view of the humanoid sculpture in the studio classroom.'
-      },
-      {
-        file: 'assets/images/reflection-thumb-base64.txt',
-        alt: 'Close-up finished view of the humanoid sculpture with its reverse side visible in a mirror reflection.'
+    const buildFabricationSlideshow = async () => {
+      const slideshow = document.createElement('figure');
+      slideshow.className = 'fabrication-study-slideshow';
+      slideshow.setAttribute('aria-label', 'Fabrication process and detail views');
+      slideshow.tabIndex = 0;
+
+      const processImg = document.createElement('img');
+      processImg.src = 'assets/images/minerva-beta-process-fixed.webp';
+      processImg.alt = 'Raw clay in-process view of the humanoid sculpture in the studio classroom.';
+      processImg.decoding = 'async';
+      processImg.classList.add('is-active');
+      processImg.setAttribute('aria-hidden', 'false');
+      slideshow.appendChild(processImg);
+
+      try {
+        const response = await fetch('assets/images/reflection-thumb-base64.txt', { cache: 'no-store' });
+        if (!response.ok) throw new Error('Could not load reflection study');
+        const data = (await response.text()).trim();
+        if (data) {
+          const reflectionImg = document.createElement('img');
+          reflectionImg.src = `data:image/webp;base64,${data}`;
+          reflectionImg.alt = 'Close-up finished view of the humanoid sculpture with its reverse side visible in a mirror reflection.';
+          reflectionImg.decoding = 'async';
+          reflectionImg.setAttribute('aria-hidden', 'true');
+          slideshow.appendChild(reflectionImg);
+        }
+      } catch (error) {
+        console.warn('Could not load fabrication reflection image.', error);
       }
-    ];
 
-    Promise.all(sources.map(async ({ file, alt }) => {
-      const response = await fetch(file, { cache: 'no-store' });
-      if (!response.ok) throw new Error(`Could not load ${file}`);
-      return { data: (await response.text()).trim(), alt };
-    }))
-      .then((items) => {
-        const slideshow = document.createElement('figure');
-        slideshow.className = 'fabrication-study-slideshow';
-        slideshow.setAttribute('aria-label', 'Fabrication process and detail views');
-        slideshow.tabIndex = 0;
+      const meta = fabricationCard.querySelector('.work-meta');
+      if (meta) meta.insertAdjacentElement('afterend', slideshow);
+      initSlideshow(slideshow, 5200);
+    };
 
-        items.forEach(({ data, alt }, index) => {
-          const img = document.createElement('img');
-          img.src = `data:image/webp;base64,${data}`;
-          img.alt = alt;
-          img.decoding = 'async';
-          img.classList.toggle('is-active', index === 0);
-          img.setAttribute('aria-hidden', index === 0 ? 'false' : 'true');
-          slideshow.appendChild(img);
-        });
-
-        const meta = fabricationCard.querySelector('.work-meta');
-        if (meta) meta.insertAdjacentElement('afterend', slideshow);
-        initSlideshow(slideshow, 5200);
-      })
-      .catch((error) => {
-        console.warn('Could not build fabrication slideshow.', error);
-      });
+    buildFabricationSlideshow();
   }
 
   initSlideshow(document.querySelector("[data-studio-slideshow]"), 6500);
