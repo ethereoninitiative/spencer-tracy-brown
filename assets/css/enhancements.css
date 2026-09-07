@@ -52,11 +52,7 @@
 .press-archive-link:hover .press-archive-title,
 .press-archive-link:focus-visible .press-archive-title { color: var(--cobalt, #123f78); }
 
-
-/* Press synopses: editorial previews centered on Spencer's role in each record. */
-.press-archive-link {
-  position: relative;
-}
+.press-archive-link { position: relative; }
 
 .press-archive-synopsis {
   position: absolute;
@@ -106,9 +102,7 @@
 }
 
 .press-archive-link:hover,
-.press-archive-link:focus-visible {
-  z-index: 10;
-}
+.press-archive-link:focus-visible { z-index: 10; }
 
 .press-archive-link:hover .press-archive-synopsis,
 .press-archive-link:focus-visible .press-archive-synopsis {
@@ -131,16 +125,10 @@
     visibility: visible;
     transform: none;
   }
-
-  .press-archive-synopsis::before {
-    display: none;
-  }
+  .press-archive-synopsis::before { display: none; }
 }
 
-/* Studio & Fabrication gets one featured artwork without changing the rest of the portfolio rhythm. */
-.practice-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
+.practice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 .practice-card-featured {
   grid-column: 1 / -1;
@@ -151,16 +139,8 @@
   align-items: start;
 }
 
-.practice-card-featured > h3 {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.practice-card-featured > p:not(.work-index) {
-  grid-column: 1;
-  grid-row: 2;
-  align-self: start;
-}
+.practice-card-featured > h3 { grid-column: 1; grid-row: 1; }
+.practice-card-featured > p:not(.work-index) { grid-column: 1; grid-row: 2; align-self: start; }
 
 .studio-fabrication-art {
   grid-column: 2;
@@ -168,17 +148,9 @@
   align-self: stretch;
   width: 100%;
 }
+.studio-fabrication-art .art-frame { aspect-ratio: 4 / 5; min-height: 100%; }
+.studio-fabrication-art img { object-position: center center; }
 
-.studio-fabrication-art .art-frame {
-  aspect-ratio: 4 / 5;
-  min-height: 100%;
-}
-
-.studio-fabrication-art img {
-  object-position: center center;
-}
-
-/* Tucson studio / retail environment — wide evidence of entrepreneurship, visual communication, and spatial design. */
 .practice-grid::after {
   content: "";
   grid-column: 1 / -1;
@@ -187,7 +159,7 @@
   aspect-ratio: 4 / 3;
   margin: clamp(1.4rem, 3vw, 2.6rem) auto .35rem;
   border: 2px solid var(--ink, #171413);
-  background-image: url("../images/suntoad-studios-tucson.webp");
+  background-image: url("../images/suntoad-studios-tucson.webp?v=2");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -196,7 +168,6 @@
 
 @media (hover: hover) and (pointer: fine) {
   .art-frame[data-magnifier-ready="true"] { cursor: zoom-in; }
-
   .art-magnifier-lens {
     position: absolute;
     width: clamp(8rem, 14vw, 11rem);
@@ -212,32 +183,20 @@
     transition: opacity .12s ease;
     will-change: left, top, background-position;
   }
-
   .art-frame.magnifier-active .art-magnifier-lens { opacity: 1; }
 }
 
 @media (max-width: 900px) {
-  .practice-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .practice-grid { grid-template-columns: 1fr; }
   .practice-card-featured {
     grid-column: auto;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
-
   .practice-card-featured > h3,
   .practice-card-featured > p:not(.work-index),
-  .studio-fabrication-art {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
-  .studio-fabrication-art {
-    margin-top: .55rem;
-  }
-
+  .studio-fabrication-art { grid-column: 1; grid-row: auto; }
+  .studio-fabrication-art { margin-top: .55rem; }
   .practice-grid::after {
     width: 100%;
     margin-top: 1.2rem;
@@ -246,8 +205,5 @@
 }
 
 @media (max-width: 560px) {
-  .press-archive-link {
-    grid-template-columns: 1fr;
-    gap: .2rem;
-  }
+  .press-archive-link { grid-template-columns: 1fr; gap: .2rem; }
 }
