@@ -8,7 +8,7 @@
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  width: min(50%, 15rem);
+  width: min(58%, 17.25rem);
   aspect-ratio: 3 / 4;
   margin-top: 0;
   border: 2px solid var(--ink, #171413);
@@ -78,14 +78,14 @@
   .work-card:nth-child(4) .work-meta p:last-child { margin-bottom: 0; }
   .fabrication-study-slideshow {
     order: 2;
-    width: min(58%, 15rem);
+    width: min(64%, 17rem);
     margin-top: 0;
   }
   .work-card:nth-child(4) .art-figure { order: 3; }
 }
 
 @media (max-width: 560px) {
-  .fabrication-study-slideshow { width: min(68%, 15rem); }
+  .fabrication-study-slideshow { width: min(72%, 16.5rem); }
 }
 
 @media (prefers-reduced-motion: reduce) {
