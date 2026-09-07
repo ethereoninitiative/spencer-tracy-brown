@@ -1,5 +1,34 @@
 @import url("enhancements-base.css");
 
+.artwork-caption {
+  display: grid;
+  gap: .28rem;
+  margin-top: .8rem;
+}
+
+.artwork-title {
+  display: block;
+  color: var(--ink, #171413);
+  font-family: var(--serif, Georgia, serif);
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.artwork-description {
+  display: block;
+  max-width: 46ch;
+  color: var(--muted, #64574e);
+  font-family: var(--sans, system-ui, sans-serif);
+  font-size: .76rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: .02em;
+  text-transform: none;
+}
+
 /* Ceramics & Material Studies: supporting teapot image beneath the text. */
 .work-card:nth-child(2) {
   align-items: start;
