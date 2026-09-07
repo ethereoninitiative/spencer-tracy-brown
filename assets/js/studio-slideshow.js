@@ -188,6 +188,16 @@
     buildFabricationSlideshow();
   }
 
+  const studioCard = Array.from(document.querySelectorAll('.practice-card')).find((card) =>
+    card.querySelector('h3')?.textContent.trim() === 'Studio & Fabrication'
+  );
+  if (studioCard) {
+    const description = studioCard.querySelector('h3')?.nextElementSibling;
+    if (description?.tagName === 'P') {
+      description.textContent = 'Building studios, fabrication workflows, shop systems, and physical environments for making — from planning and spatial problem-solving through construction, tool organization, material systems, display, and the creation of spaces that support sustained creative work.';
+    }
+  }
+
   const studioSlideshow = document.querySelector('[data-studio-slideshow]');
   if (studioSlideshow) {
     const studioImages = [
