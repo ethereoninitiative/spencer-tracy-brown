@@ -135,8 +135,12 @@
     img.decoding = 'async';
     img.addEventListener('error', () => { figure.hidden = true; });
 
+    const caption = document.createElement('figcaption');
+    caption.className = 'artwork-caption';
+    caption.innerHTML = '<span class="artwork-title">Luminous Threads</span><span class="artwork-description">Abstract painting tracing interlacing movement, energy, and color.</span>';
+
     frame.appendChild(img);
-    figure.appendChild(frame);
+    figure.append(frame, caption);
 
     const aboutCopy = aboutSection.querySelector('.about-copy');
     if (aboutCopy) aboutSection.insertBefore(figure, aboutCopy);
