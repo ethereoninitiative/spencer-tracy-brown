@@ -212,6 +212,13 @@
       if (index === 0) image.classList.add('is-active');
       studioSlideshow.appendChild(image);
     });
+
+    const entrepreneurshipCard = Array.from(document.querySelectorAll('.practice-card')).find((card) =>
+      card.querySelector('h3')?.textContent.trim() === 'Entrepreneurship & Visual Communication'
+    );
+    if (entrepreneurshipCard && studioSlideshow.parentElement !== entrepreneurshipCard) {
+      entrepreneurshipCard.appendChild(studioSlideshow);
+    }
   }
 
   initSlideshow(studioSlideshow, 3800);
