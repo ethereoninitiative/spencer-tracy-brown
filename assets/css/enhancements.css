@@ -167,11 +167,11 @@
 }
 
 /* Studio & Fabrication: pair the practice copy with one representative object. */
-.practice-grid {
+.practice-grid.has-featured-practice-art {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.practice-grid > .practice-card:first-child {
+.practice-card.practice-card-featured {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(18rem, .9fr);
@@ -194,11 +194,11 @@
 }
 
 @media (max-width: 900px) {
-  .practice-grid {
+  .practice-grid.has-featured-practice-art {
     grid-template-columns: 1fr;
   }
 
-  .practice-grid > .practice-card:first-child {
+  .practice-card.practice-card-featured {
     grid-column: auto;
     grid-template-columns: 1fr;
     gap: 1.35rem;
