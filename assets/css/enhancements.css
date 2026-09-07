@@ -1,60 +1,64 @@
 @import url("enhancements-base.css");
 
-/* Object & Creative Fabrication: finished work -> process -> alternate dimensional view */
+/* Object & Creative Fabrication: process studies sit directly beneath the copy;
+   the finished work remains the dominant image on the right. */
 .work-card:nth-child(4)::before,
 .work-card:nth-child(4)::after {
   content: "";
   display: block;
-  min-height: 12.5rem;
   border: 2px solid var(--ink, #171413);
   background-color: #e8dfd3;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   box-shadow: .38rem .38rem 0 rgba(23, 20, 19, .18);
 }
 
 .work-card:nth-child(4)::before {
-  background-image: url("../images/minerva-beta-process.jpeg");
+  background-image: var(--fabrication-process-image, none);
 }
 
 .work-card:nth-child(4)::after {
-  background-image: url("../images/minerva-beta-reflection.jpeg");
+  background-image: var(--fabrication-reflection-image, none);
 }
 
 @media (min-width: 901px) {
   .work-card:nth-child(4) {
-    grid-template-columns: minmax(16rem, .78fr) minmax(0, 1.22fr);
-    grid-template-rows: auto 1fr 1fr;
-    gap: clamp(1.25rem, 2.5vw, 2rem) clamp(1.5rem, 3vw, 2.5rem);
-    align-items: stretch;
+    grid-template-columns: minmax(18rem, .84fr) minmax(0, 1.16fr);
+    grid-template-rows: auto auto auto;
+    gap: .9rem clamp(1.8rem, 3vw, 2.8rem);
+    align-items: start;
   }
 
   .work-card:nth-child(4) .work-meta {
     grid-column: 1;
     grid-row: 1;
     padding-top: 0;
+    margin-bottom: .15rem;
   }
 
   .work-card:nth-child(4)::before {
     grid-column: 1;
     grid-row: 2;
+    min-height: 17rem;
   }
 
   .work-card:nth-child(4)::after {
     grid-column: 1;
     grid-row: 3;
+    min-height: 15rem;
+    margin-top: .15rem;
   }
 
   .work-card:nth-child(4) .art-figure {
     grid-column: 2;
     grid-row: 1 / span 3;
-    align-self: stretch;
+    align-self: start;
   }
 
   .work-card:nth-child(4) .art-frame {
-    height: 100%;
-    min-height: 38rem;
+    height: auto;
+    min-height: 0;
   }
 }
 
@@ -62,11 +66,11 @@
   .work-card:nth-child(4) {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1.1rem;
   }
 
   .work-card:nth-child(4) .work-meta { order: 1; padding-top: .35rem; }
-  .work-card:nth-child(4)::before { order: 2; min-height: clamp(20rem, 92vw, 34rem); }
-  .work-card:nth-child(4)::after { order: 3; min-height: clamp(18rem, 84vw, 31rem); }
+  .work-card:nth-child(4)::before { order: 2; min-height: clamp(18rem, 92vw, 32rem); }
+  .work-card:nth-child(4)::after { order: 3; min-height: clamp(17rem, 88vw, 30rem); }
   .work-card:nth-child(4) .art-figure { order: 4; }
 }
