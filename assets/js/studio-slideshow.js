@@ -188,5 +188,31 @@
     buildFabricationSlideshow();
   }
 
-  initSlideshow(document.querySelector("[data-studio-slideshow]"), 3800);
+  const studioSlideshow = document.querySelector('[data-studio-slideshow]');
+  if (studioSlideshow) {
+    const studioImages = [
+      ['assets/images/suntoad-studios-tucson.webp', 'Suntoad Studios finished Tucson studio interior'],
+      ['assets/images/suntoad-studio-01-demolition.webp', 'Suntoad Studios during demolition and early construction'],
+      ['assets/images/suntoad-studio-02-wall-prep.webp', 'Suntoad Studios wall preparation during construction'],
+      ['assets/images/suntoad-studio-03-mural-making.webp', 'Suntoad Studios mural-making during the build-out'],
+      ['assets/images/suntoad-studio-04-surfboard.webp', 'Suntoad Studios surfboard display and studio environment'],
+      ['assets/images/suntoad-studio-05-gallery-display.webp', 'Suntoad Studios gallery display area'],
+      ['assets/images/suntoad-studio-06-window-display.webp', 'Suntoad Studios window display'],
+      ['assets/images/suntoad-studio-07-gallery-wall.webp', 'Suntoad Studios finished gallery wall']
+    ];
+
+    studioSlideshow.querySelectorAll('img').forEach((image) => image.remove());
+    studioImages.forEach(([src, alt], index) => {
+      const image = document.createElement('img');
+      image.src = src;
+      image.alt = alt;
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      image.setAttribute('aria-hidden', index === 0 ? 'false' : 'true');
+      if (index === 0) image.classList.add('is-active');
+      studioSlideshow.appendChild(image);
+    });
+  }
+
+  initSlideshow(studioSlideshow, 3800);
 })();
