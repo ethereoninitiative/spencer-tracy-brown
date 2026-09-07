@@ -120,6 +120,26 @@
     }
   }
 
+  const cvActions = document.querySelector('.cv-actions');
+  if (cvActions && !cvActions.querySelector('.cv-archive-art')) {
+    const figure = document.createElement('figure');
+    figure.className = 'art-figure cv-archive-art';
+
+    const frame = document.createElement('div');
+    frame.className = 'art-frame';
+
+    const img = document.createElement('img');
+    img.src = 'assets/images/Luminous%20Threads.jpeg';
+    img.alt = 'Luminous Threads, an abstract painting with sweeping orange, gold, red, and blue forms.';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.addEventListener('error', () => { figure.hidden = true; });
+
+    frame.appendChild(img);
+    figure.appendChild(frame);
+    cvActions.prepend(figure);
+  }
+
   const fabricationCard = document.querySelector('.work-grid .work-card:nth-child(4)');
 
   if (fabricationCard && !fabricationCard.querySelector('.fabrication-study-slideshow')) {
