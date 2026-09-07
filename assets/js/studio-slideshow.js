@@ -120,8 +120,8 @@
     }
   }
 
-  const cvActions = document.querySelector('.cv-actions');
-  if (cvActions && !cvActions.querySelector('.cv-archive-art')) {
+  const aboutSection = document.querySelector('.about-section');
+  if (aboutSection && !aboutSection.querySelector('.cv-archive-art')) {
     const figure = document.createElement('figure');
     figure.className = 'art-figure cv-archive-art';
 
@@ -137,7 +137,10 @@
 
     frame.appendChild(img);
     figure.appendChild(frame);
-    cvActions.prepend(figure);
+
+    const aboutCopy = aboutSection.querySelector('.about-copy');
+    if (aboutCopy) aboutSection.insertBefore(figure, aboutCopy);
+    else aboutSection.appendChild(figure);
   }
 
   const fabricationCard = document.querySelector('.work-grid .work-card:nth-child(4)');
