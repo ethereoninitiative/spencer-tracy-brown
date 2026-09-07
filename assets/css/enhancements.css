@@ -52,6 +52,91 @@
 .press-archive-link:hover .press-archive-title,
 .press-archive-link:focus-visible .press-archive-title { color: var(--cobalt, #123f78); }
 
+
+/* Press synopses: editorial previews centered on Spencer's role in each record. */
+.press-archive-link {
+  position: relative;
+}
+
+.press-archive-synopsis {
+  position: absolute;
+  z-index: 12;
+  top: calc(100% - .15rem);
+  left: 50%;
+  width: min(34rem, calc(100vw - 2rem));
+  padding: 1rem 1.1rem 1.05rem;
+  border: 2px solid var(--ink, #171413);
+  background: #fff8ec;
+  box-shadow: .38rem .38rem 0 var(--ink, #171413);
+  color: var(--muted, #64574e);
+  font-family: var(--sans, system-ui, sans-serif);
+  font-size: .82rem;
+  font-weight: 500;
+  line-height: 1.58;
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, -.2rem);
+  transition: opacity .16s ease, transform .16s ease, visibility .16s;
+}
+
+.press-archive-synopsis::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: .72rem;
+  height: .72rem;
+  border-top: 2px solid var(--ink, #171413);
+  border-left: 2px solid var(--ink, #171413);
+  background: #fff8ec;
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+
+.press-archive-synopsis-kicker {
+  display: block;
+  margin-bottom: .35rem;
+  color: var(--cobalt, #123f78);
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.press-archive-link:hover,
+.press-archive-link:focus-visible {
+  z-index: 10;
+}
+
+.press-archive-link:hover .press-archive-synopsis,
+.press-archive-link:focus-visible .press-archive-synopsis {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, .35rem);
+}
+
+@media (hover: none), (pointer: coarse), (max-width: 700px) {
+  .press-archive-synopsis {
+    position: static;
+    grid-column: 1 / -1;
+    width: auto;
+    margin-top: .35rem;
+    padding: .75rem .85rem;
+    border-width: 1px;
+    box-shadow: none;
+    background: rgba(255, 248, 236, .62);
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .press-archive-synopsis::before {
+    display: none;
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .art-frame[data-magnifier-ready="true"] { cursor: zoom-in; }
 
