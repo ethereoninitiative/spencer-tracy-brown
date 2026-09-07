@@ -67,7 +67,7 @@
       slideshow.tabIndex = 0;
 
       const processImg = document.createElement('img');
-      processImg.src = 'assets/images/minerva-beta-process-fixed.webp';
+      processImg.src = 'assets/images/minerva-beta-process-enhanced-500.webp';
       processImg.alt = 'Raw clay in-process view of the humanoid sculpture in the studio classroom.';
       processImg.decoding = 'async';
       processImg.classList.add('is-active');
