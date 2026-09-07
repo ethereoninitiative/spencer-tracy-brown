@@ -137,6 +137,47 @@
   }
 }
 
+/* Studio & Fabrication gets one featured artwork without changing the rest of the portfolio rhythm. */
+.practice-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.practice-card-featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(18rem, .92fr);
+  grid-template-rows: auto 1fr;
+  gap: .8rem clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.practice-card-featured > h3 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.practice-card-featured > p:not(.work-index) {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: start;
+}
+
+.studio-fabrication-art {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: stretch;
+  width: 100%;
+}
+
+.studio-fabrication-art .art-frame {
+  aspect-ratio: 4 / 5;
+  min-height: 100%;
+}
+
+.studio-fabrication-art img {
+  object-position: center center;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .art-frame[data-magnifier-ready="true"] { cursor: zoom-in; }
 
@@ -157,6 +198,29 @@
   }
 
   .art-frame.magnifier-active .art-magnifier-lens { opacity: 1; }
+}
+
+@media (max-width: 900px) {
+  .practice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-card-featured {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .practice-card-featured > h3,
+  .practice-card-featured > p:not(.work-index),
+  .studio-fabrication-art {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .studio-fabrication-art {
+    margin-top: .55rem;
+  }
 }
 
 @media (max-width: 560px) {
