@@ -22,6 +22,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  image-rendering: auto;
   background: #e8dfd3;
   opacity: 0;
   pointer-events: none;
@@ -33,8 +34,8 @@
 @media (min-width: 901px) {
   .work-card:nth-child(4) {
     grid-template-columns: minmax(18rem, .82fr) minmax(0, 1.18fr);
-    grid-template-rows: auto auto;
-    gap: 0 clamp(1.8rem, 3vw, 2.8rem);
+    grid-template-rows: auto;
+    column-gap: clamp(1.8rem, 3vw, 2.8rem);
     align-items: start;
   }
 
@@ -48,14 +49,15 @@
 
   .fabrication-study-slideshow {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 1;
     justify-self: start;
-    transform: translateY(-4.75rem);
+    align-self: start;
+    margin-top: 19.5rem;
   }
 
   .work-card:nth-child(4) .art-figure {
     grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-row: 1;
     align-self: start;
   }
 
