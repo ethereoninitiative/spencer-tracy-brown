@@ -34,7 +34,7 @@
 .slideshow-control {
   position: absolute;
   z-index: 5;
-  top: 50%;
+  bottom: .8rem;
   width: 2.65rem;
   height: 2.65rem;
   display: grid;
@@ -47,7 +47,6 @@
   box-shadow: .18rem .18rem 0 rgba(23,20,19,.28);
   font: inherit;
   cursor: pointer;
-  transform: translateY(-50%);
   transition: background .15s ease, color .15s ease, transform .15s ease;
 }
 
@@ -69,7 +68,7 @@
 }
 
 .slideshow-control:active {
-  transform: translateY(-50%) scale(.94);
+  transform: scale(.94);
 }
 
 .slideshow-control:focus-visible {
@@ -135,6 +134,7 @@
   .slideshow-control {
     width: 2.35rem;
     height: 2.35rem;
+    bottom: .55rem;
   }
   .slideshow-control span { font-size: 1.7rem; }
   .slideshow-control-prev { left: .45rem; }
