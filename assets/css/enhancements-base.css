@@ -18,9 +18,10 @@
 .cv-archive-art {
   grid-column: 1;
   grid-row: 1 / span 2;
-  width: 100%;
-  max-width: 23rem;
+  width: clamp(20rem, 24vw, 27rem);
+  max-width: none;
   align-self: start;
+  justify-self: start;
 }
 
 .cv-archive-art .art-frame {
@@ -227,6 +228,10 @@
 }
 
 @media (min-width: 901px) {
+  .cv-archive-art {
+    margin-left: clamp(-9rem, -8vw, -6rem);
+  }
+
   .work-card:not(.large-card) {
     grid-column: 1 / -1;
     display: grid;
@@ -306,7 +311,7 @@
     grid-column: 1;
     grid-row: 1;
     width: min(78%, 20rem);
-    margin-bottom: .35rem;
+    margin: 0 0 .35rem;
   }
   .cv-actions > .cv-link {
     grid-column: 1;
