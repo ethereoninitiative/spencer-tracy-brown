@@ -3,25 +3,74 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://spencertracybrown.com/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image><image:loc>https://spencertracybrown.com/assets/portfolio-canon-r1/hero-hanging-assemblage.png</image:loc></image:image>
-    <image:image><image:loc>https://spencertracybrown.com/assets/images/Covid-reflections.png</image:loc></image:image>
-    <image:image><image:loc>https://spencertracybrown.com/assets/portfolio-canon-r1/ceramics-lidded-vessel.png</image:loc></image:image>
-    <image:image><image:loc>https://spencertracybrown.com/assets/portfolio-canon-r1/mixed-media-keys-between-figures.png</image:loc></image:image>
-    <image:image><image:loc>https://spencertracybrown.com/assets/images/Minerva-beta-test.png</image:loc></image:image>
-    <image:image><image:loc>https://spencertracybrown.com/assets/portfolio-canon-r1/sculpture-raised-arms-figure.png</image:loc></image:image>
-    <image:image><image:loc>https://spencertracybrown.com/assets/images/the-boundary-is-never-just-a-line.png</image:loc></image:image>
+
+    <image:image>
+      <image:loc>https://spencertracybrown.com/assets/portfolio-canon-r1/hero-hanging-assemblage.webp</image:loc>
+      <image:title>Hanging Assemblage 001 — Spencer Tracy Brown</image:title>
+      <image:caption>Suspended assemblage by Arizona visual artist Spencer Tracy Brown examining weight, tension, accumulation, and the transformation of space.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://spencertracybrown.com/assets/images/Covid-reflections.webp</image:loc>
+      <image:title>Covid Reflections — Spencer Tracy Brown</image:title>
+      <image:caption>Figurative sculpture by Spencer Tracy Brown exploring bodily transformation, psychic pressure, and adaptation.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://spencertracybrown.com/assets/portfolio-canon-r1/ceramics-lidded-vessel.webp</image:loc>
+      <image:title>Commissioned Lidded Vessel — Spencer Tracy Brown</image:title>
+      <image:caption>Commissioned ceramic vessel by Spencer Tracy Brown exploring altered form, layered glaze, and functional object-making.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://spencertracybrown.com/assets/images/Handcrafted-Teal-and-Forest-Green-Teapot.jpeg</image:loc>
+      <image:title>Handcrafted Teal and Forest Green Teapot — Spencer Tracy Brown</image:title>
+      <image:caption>Raku-fired ceramic teapot by Spencer Tracy Brown demonstrating functional construction, surface variation, and glaze response.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://spencertracybrown.com/assets/portfolio-canon-r1/mixed-media-keys-between-figures.webp</image:loc>
+      <image:title>Boundaries I — Spencer Tracy Brown</image:title>
+      <image:caption>Mixed-media work by Spencer Tracy Brown studying relation, obstruction, access, and the charged space between people.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://spencertracybrown.com/assets/images/Minerva-beta-test.webp</image:loc>
+      <image:title>Minerva Beta Form — Spencer Tracy Brown</image:title>
+      <image:caption>Hand-built humanoid form by Spencer Tracy Brown exploring constructed identity, embodiment, and the boundary between object and being.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://spencertracybrown.com/assets/portfolio-canon-r1/sculpture-raised-arms-figure.webp</image:loc>
+      <image:title>In the Depths of the Pandemic (Covid) — Spencer Tracy Brown</image:title>
+      <image:caption>Figurative sculpture by Spencer Tracy Brown shaped by isolation, exposure, and embodied tension.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://spencertracybrown.com/assets/images/Luminous%20Threads.jpeg</image:loc>
+      <image:title>Luminous Threads — Spencer Tracy Brown</image:title>
+      <image:caption>Abstract painting by Spencer Tracy Brown tracing interlacing movement, energy, and color.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://spencertracybrown.com/assets/images/obsidian-horned-skull.jpeg</image:loc>
+      <image:title>Obsidian Horned Skull — Spencer Tracy Brown</image:title>
+      <image:caption>Sculptural work by Arizona artist Spencer Tracy Brown demonstrating material transformation and organic visual language.</image:caption>
+    </image:image>
   </url>
+
   <url>
     <loc>https://spencertracybrown.com/spencer-tracy-brown/</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image><image:loc>https://spencertracybrown.com/assets/images/spencer-studio-process.jpeg</image:loc></image:image>
-    <image:image><image:loc>https://spencertracybrown.com/assets/images/SunToad-transbkgrd.png</image:loc></image:image>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://spencertracybrown.com/assets/images/spencer-studio-process.webp</image:loc>
+      <image:title>Spencer Tracy Brown — Arizona Visual Artist</image:title>
+      <image:caption>Spencer Tracy Brown, Arizona visual artist, sculptor, creative fabricator, and educator, working in a studio environment.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://spencertracybrown.com/assets/images/SunToad-transbkgrd.webp</image:loc>
+      <image:title>SunToad — creative identity of Spencer Tracy Brown</image:title>
+      <image:caption>SunToad creative mark associated with Arizona artist Spencer Tracy Brown.</image:caption>
+    </image:image>
   </url>
+
   <url>
     <loc>https://spencertracybrown.com/assets/docs/Spencer-Tracy-Brown-CV.pdf</loc>
     <lastmod>2026-09-05</lastmod>
