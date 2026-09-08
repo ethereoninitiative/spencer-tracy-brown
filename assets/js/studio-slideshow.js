@@ -116,15 +116,34 @@
 
   const ceramicsCard = document.querySelector('.work-grid .work-card:nth-child(2)');
   if (ceramicsCard) {
+    const ceramicsFigure = ceramicsCard.querySelector('.work-art');
+    const ceramicsMeta = ceramicsCard.querySelector('.work-meta');
+
     setArtworkCaption(
-      ceramicsCard.querySelector('.work-art'),
+      ceramicsFigure,
       'Commissioned Lidded Vessel',
       'Commissioned ceramic vessel exploring altered form, layered glaze, and functional object-making.'
     );
+
+    if (ceramicsFigure && ceramicsMeta && !ceramicsCard.querySelector('.ceramics-section-intro')) {
+      const intro = document.createElement('div');
+      intro.className = 'work-meta ceramics-section-intro';
+
+      const index = ceramicsMeta.querySelector('.work-index');
+      const heading = ceramicsMeta.querySelector('h3');
+      const description = ceramicsMeta.querySelector(':scope > p:not(.work-index)');
+
+      if (index) intro.appendChild(index);
+      if (heading) intro.appendChild(heading);
+      if (description) intro.appendChild(description);
+
+      ceramicsCard.insertBefore(intro, ceramicsFigure);
+      ceramicsMeta.classList.add('ceramics-supporting-wrap');
+    }
   }
 
   if (ceramicsCard && !ceramicsCard.querySelector('.ceramics-supporting-art')) {
-    const meta = ceramicsCard.querySelector('.work-meta');
+    const meta = ceramicsCard.querySelector('.ceramics-supporting-wrap') || ceramicsCard.querySelector('.work-meta');
     if (meta) {
       const figure = document.createElement('figure');
       figure.className = 'art-figure ceramics-supporting-art';
