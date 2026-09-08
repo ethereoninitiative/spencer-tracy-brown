@@ -97,7 +97,32 @@
     schedule();
   };
 
+  const setArtworkCaption = (figure, title, description) => {
+    if (!figure) return;
+    let caption = figure.querySelector(':scope > figcaption');
+    if (!caption) {
+      caption = document.createElement('figcaption');
+      figure.appendChild(caption);
+    }
+    caption.className = 'artwork-caption';
+    caption.innerHTML = `<span class="artwork-title">${title}</span><span class="artwork-description">${description}</span>`;
+  };
+
+  setArtworkCaption(
+    document.querySelector('.hero-art'),
+    'Hanging Assemblage 001',
+    'Suspended assemblage examining weight, tension, accumulation, and the transformation of space.'
+  );
+
   const ceramicsCard = document.querySelector('.work-grid .work-card:nth-child(2)');
+  if (ceramicsCard) {
+    setArtworkCaption(
+      ceramicsCard.querySelector('.work-art'),
+      'Commissioned Lidded Vessel',
+      'Commissioned ceramic vessel exploring altered form, layered glaze, and functional object-making.'
+    );
+  }
+
   if (ceramicsCard && !ceramicsCard.querySelector('.ceramics-supporting-art')) {
     const meta = ceramicsCard.querySelector('.work-meta');
     if (meta) {
@@ -116,6 +141,11 @@
 
       frame.appendChild(img);
       figure.appendChild(frame);
+      setArtworkCaption(
+        figure,
+        'Handcrafted Teal and Forest Green Teapot',
+        'Raku-fired ceramic teapot demonstrating functional construction, surface variation, and glaze response.'
+      );
       meta.appendChild(figure);
     }
   }
@@ -148,6 +178,13 @@
   }
 
   const fabricationCard = document.querySelector('.work-grid .work-card:nth-child(4)');
+  if (fabricationCard) {
+    setArtworkCaption(
+      fabricationCard.querySelector('.work-art'),
+      'Minerva Beta Form',
+      'Hand-built humanoid form exploring constructed identity, embodiment, and the boundary between object and being.'
+    );
+  }
 
   if (fabricationCard && !fabricationCard.querySelector('.fabrication-study-slideshow')) {
     const buildFabricationSlideshow = async () => {
