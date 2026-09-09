@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://spencertracybrown.com/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
 
@@ -48,6 +48,11 @@
       <image:caption>Abstract painting by Spencer Tracy Brown tracing interlacing movement, energy, and color.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://spencertracybrown.com/assets/images/Spence%26Mary.jpeg</image:loc>
+      <image:title>Spencer Tracy Brown with Mary Neubauer</image:title>
+      <image:caption>Spencer Tracy Brown with ASU Professor Emerita of Sculpture Mary Neubauer, reflecting the sculptural lineage that helped shape his material and interdisciplinary practice.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://spencertracybrown.com/assets/images/obsidian-horned-skull.jpeg</image:loc>
       <image:title>Obsidian Horned Skull — Spencer Tracy Brown</image:title>
       <image:caption>Sculptural work by Arizona artist Spencer Tracy Brown demonstrating material transformation and organic visual language.</image:caption>
@@ -56,7 +61,7 @@
 
   <url>
     <loc>https://spencertracybrown.com/spencer-tracy-brown/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
