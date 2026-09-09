@@ -29,9 +29,9 @@
   text-transform: none;
 }
 
-/* About archive artwork: keep Luminous Threads visually secondary and give it air. */
+/* About archive artwork: preserve Luminous Threads' original scale, add breathing room only. */
 .cv-archive-art {
-  width: min(88%, 23.5rem);
+  width: min(100%, 27rem);
   margin-top: clamp(2.4rem, 4vw, 3.5rem);
   margin-bottom: 1rem;
 }
@@ -261,7 +261,7 @@
 
 @media (max-width: 900px) {
   .cv-archive-art {
-    width: min(72%, 20rem);
+    width: min(78%, 22rem);
     margin: 2rem 0 1.5rem;
   }
 
