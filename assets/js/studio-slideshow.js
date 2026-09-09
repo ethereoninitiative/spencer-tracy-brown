@@ -116,84 +116,11 @@
 
   const ceramicsCard = document.querySelector('.work-grid .work-card:nth-child(2)');
   if (ceramicsCard) {
-    const ceramicsFigure = ceramicsCard.querySelector('.work-art');
-    const ceramicsMeta = ceramicsCard.querySelector('.work-meta');
-
     setArtworkCaption(
-      ceramicsFigure,
+      ceramicsCard.querySelector('.work-art'),
       'Commissioned Lidded Vessel',
       'Commissioned ceramic vessel exploring altered form, layered glaze, and functional object-making.'
     );
-
-    if (ceramicsFigure && ceramicsMeta && !ceramicsCard.querySelector('.ceramics-section-intro')) {
-      const intro = document.createElement('div');
-      intro.className = 'work-meta ceramics-section-intro';
-
-      const index = ceramicsMeta.querySelector('.work-index');
-      const heading = ceramicsMeta.querySelector('h3');
-      const description = ceramicsMeta.querySelector(':scope > p:not(.work-index)');
-
-      if (index) intro.appendChild(index);
-      if (heading) intro.appendChild(heading);
-      if (description) intro.appendChild(description);
-
-      ceramicsCard.insertBefore(intro, ceramicsFigure);
-      ceramicsMeta.classList.add('ceramics-supporting-wrap');
-    }
-  }
-
-  if (ceramicsCard && !ceramicsCard.querySelector('.ceramics-supporting-art')) {
-    const meta = ceramicsCard.querySelector('.ceramics-supporting-wrap') || ceramicsCard.querySelector('.work-meta');
-    if (meta) {
-      const figure = document.createElement('figure');
-      figure.className = 'art-figure ceramics-supporting-art';
-
-      const frame = document.createElement('div');
-      frame.className = 'art-frame';
-
-      const img = document.createElement('img');
-      img.src = 'assets/images/Handcrafted-Teal-and-Forest-Green-Teapot.jpeg';
-      img.alt = 'Handcrafted ceramic teapot with layered teal, forest green, turquoise, burgundy, and earthy glaze.';
-      img.loading = 'lazy';
-      img.decoding = 'async';
-      img.addEventListener('error', () => { figure.hidden = true; });
-
-      frame.appendChild(img);
-      figure.appendChild(frame);
-      setArtworkCaption(
-        figure,
-        'Handcrafted Teal and Forest Green Teapot',
-        'Raku-fired ceramic teapot demonstrating functional construction, surface variation, and glaze response.'
-      );
-      meta.appendChild(figure);
-    }
-  }
-
-  const aboutSection = document.querySelector('.about-section');
-  if (aboutSection && !aboutSection.querySelector('.cv-archive-art')) {
-    const figure = document.createElement('figure');
-    figure.className = 'art-figure cv-archive-art';
-
-    const frame = document.createElement('div');
-    frame.className = 'art-frame';
-
-    const img = document.createElement('img');
-    img.src = 'assets/images/Luminous%20Threads.jpeg';
-    img.alt = 'Luminous Threads, an abstract painting with sweeping orange, gold, red, and blue forms.';
-    img.loading = 'lazy';
-    img.decoding = 'async';
-    img.addEventListener('error', () => { figure.hidden = true; });
-
-    const caption = document.createElement('figcaption');
-    caption.className = 'artwork-caption';
-    caption.innerHTML = '<span class="artwork-title">Luminous Threads</span><span class="artwork-description">Abstract painting tracing interlacing movement, energy, and color.</span>';
-
-    frame.appendChild(img);
-    figure.append(frame, caption);
-
-    const aboutCopy = aboutSection.querySelector('.about-copy');
-    if (aboutCopy) aboutSection.insertBefore(figure, aboutCopy);
-    else aboutSection.appendChild(figure);
   }
 
   const fabricationCard = document.querySelector('.work-grid .work-card:nth-child(4)');
