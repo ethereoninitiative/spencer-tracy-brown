@@ -86,8 +86,11 @@ dt{margin-bottom:.2rem;color:var(--cobalt)}dd{margin:0}
 .practice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
 .practice-card{padding:1.35rem;border-top:4px solid var(--ink);background:rgba(255,255,255,.28)}
 .practice-card:nth-child(1){border-color:var(--cobalt)}.practice-card:nth-child(2){border-color:var(--cadmium)}.practice-card:nth-child(3){border-color:var(--gold)}
-.credential-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:2rem;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
-.credential-strip div{padding:1rem;border-right:1px solid var(--line)}.credential-strip div:last-child{border-right:0}
+.credential-strip{display:grid;grid-template-columns:minmax(180px,.72fr) repeat(3,minmax(0,1fr));grid-template-rows:auto auto;gap:0 clamp(.7rem,1.4vw,1.15rem);margin-top:2.5rem;align-items:end}
+.credential-strip::before{content:"";grid-column:1;grid-row:1;width:100%;aspect-ratio:4/5;background:url("../images/Spence&Mary.jpeg") center/cover no-repeat;border:1px solid var(--line-strong)}
+.credential-strip::after{content:"With Mary Neubauer, ASU Professor Emerita of Sculpture and longtime Art Foundry director\A Part of the sculptural lineage that shaped my material and interdisciplinary practice—and expanded my sense of what sculpture could become.";white-space:pre-line;grid-column:1;grid-row:2;margin-top:.8rem;color:var(--muted);font-family:var(--serif);font-size:clamp(.72rem,.9vw,.84rem);line-height:1.55;letter-spacing:-.012em}
+.credential-strip div{grid-row:1;align-self:end;padding:1rem;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);border-right:1px solid var(--line)}
+.credential-strip div:last-child{border-right:0}
 .credential-strip strong,.credential-strip span{display:block}.credential-strip strong{font-family:var(--serif);font-size:1.5rem}.credential-strip span{margin-top:.25rem;color:var(--muted);font-size:.84rem}
 
 .contact-section{padding:clamp(3rem,6vw,6rem) 0;border-top:2px solid var(--ink)}
@@ -105,7 +108,7 @@ dt{margin-bottom:.2rem;color:var(--cobalt)}dd{margin:0}
 @media(max-width:900px){
   .masthead{align-items:flex-start;flex-direction:column}.site-nav{justify-content:flex-start}
   #top,#work,#statement,#about,#practice,#contact{scroll-margin-top:10rem}
-  .cover,.large-card,.statement-panel,.about-section,.practice-grid,.credential-strip{grid-template-columns:1fr}
+  .cover,.large-card,.statement-panel,.about-section,.practice-grid{grid-template-columns:1fr}
   .work-grid{grid-template-columns:1fr;gap:clamp(1.2rem,2.2vw,1.7rem)}.work-card,.large-card{grid-column:auto}
   h1{max-width:none;font-size:clamp(4rem,18vw,7rem)}
   .boundary-mark-heading{font-size:0}
@@ -120,7 +123,15 @@ dt{margin-bottom:.2rem;color:var(--cobalt)}dd{margin:0}
   .about-copy>p:nth-of-type(4){grid-column:1;grid-row:6}
   .cv-actions{grid-column:1;grid-row:7}
   .tag-list{grid-column:1;grid-row:8}
-  .credential-strip div{border-right:0;border-bottom:1px solid var(--line)}.credential-strip div:last-child{border-bottom:0}
+  .credential-strip{grid-template-columns:minmax(150px,.8fr) repeat(3,minmax(0,1fr));gap:0 .55rem}
+  .credential-strip::after{font-size:.72rem}
+}
+@media(max-width:700px){
+  .credential-strip{grid-template-columns:1fr;margin-top:2rem;gap:0}
+  .credential-strip::before{grid-column:1;grid-row:1;width:min(15rem,72vw);justify-self:start}
+  .credential-strip::after{grid-column:1;grid-row:2;max-width:32rem;margin:1rem 0 1.5rem;font-size:.8rem}
+  .credential-strip div{grid-column:1;grid-row:auto;border-right:0;border-bottom:0}
+  .credential-strip div:last-child{border-bottom:1px solid var(--line-strong)}
 }
 @media(max-width:560px){:root{--gutter:.85rem}.site-nav a{font-size:.7rem}.cover{padding-top:2.2rem}h1{font-size:clamp(3.4rem,20vw,5.6rem)}.boundary-mark-heading{font-size:0}.boundary-mark-heading img{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
