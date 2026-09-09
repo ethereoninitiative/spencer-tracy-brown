@@ -39,6 +39,10 @@
 }
 
 .ceramics-supporting-art {
+  position: static !important;
+  inset: auto !important;
+  float: none !important;
+  clear: both;
   width: min(72%, 22rem);
   margin: clamp(1.4rem, 2.2vw, 2rem) 0 0;
 }
@@ -133,8 +137,40 @@
 }
 
 @media (min-width: 901px) {
-  .work-card:nth-child(2) .work-meta {
+  .work-card:nth-child(2) {
+    grid-template-columns: minmax(18rem, .82fr) minmax(0, 1.18fr);
+    grid-template-rows: auto auto;
+    column-gap: clamp(1.8rem, 3vw, 2.8rem);
+    row-gap: 0;
+    align-items: start;
+  }
+
+  .work-card:nth-child(2) > .work-meta {
+    grid-column: 1;
+    grid-row: 1;
     padding-top: .35rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .work-card:nth-child(2) > .art-figure:not(.ceramics-supporting-art) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: start;
+  }
+
+  .work-card:nth-child(2) > .ceramics-supporting-art {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+    align-self: start;
+    margin-top: clamp(1.5rem, 2.4vw, 2.1rem);
+  }
+
+  .work-card:nth-child(2) .work-meta .ceramics-supporting-art {
+    display: block;
+    position: static !important;
+    margin-top: clamp(1.5rem, 2.4vw, 2.1rem);
   }
 
   .work-card:nth-child(4) {
