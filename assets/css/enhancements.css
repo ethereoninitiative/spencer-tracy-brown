@@ -35,7 +35,7 @@
   inset: auto !important;
   float: none !important;
   clear: both;
-  width: min(72%, 22rem);
+  width: min(84%, 24rem);
   margin: clamp(1.4rem, 2.2vw, 2rem) 0 0;
 }
 
@@ -194,7 +194,7 @@
     grid-row: 2 !important;
     justify-self: start;
     align-self: start;
-    width: min(72%, 22rem);
+    width: min(84%, 24rem);
     margin-top: clamp(1.5rem, 2.4vw, 2.1rem);
   }
 
@@ -235,7 +235,7 @@
 
 @media (max-width: 900px) {
   .ceramics-supporting-art {
-    width: min(68%, 20rem);
+    width: min(76%, 22rem);
   }
 
   .credential-lineage {
@@ -269,7 +269,7 @@
 
 @media (max-width: 560px) {
   .ceramics-supporting-art {
-    width: min(78%, 18rem);
+    width: min(82%, 19rem);
     margin-top: 1.25rem;
   }
 
