@@ -214,3 +214,17 @@
   .fabrication-study-slideshow img,
   .slideshow-control { transition: none; }
 }
+
+/* Homepage narrative order: introduce Spencer before the portfolio deep dive. */
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.cover { order: 1; }
+.intro-band { order: 2; }
+.about-section { order: 3; }
+.works-section { order: 4; }
+.statement-panel { order: 5; }
+.practice-section { order: 6; }
+.contact-section { order: 7; }
