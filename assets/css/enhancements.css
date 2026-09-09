@@ -87,7 +87,9 @@
 
 .credential-lineage figcaption strong {
   color: var(--ink, #171413);
+  font-size: clamp(.82rem, 1vw, .95rem);
   font-weight: 700;
+  line-height: 1.42;
 }
 
 .credential-lineage figcaption span { display: block; }
