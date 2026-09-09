@@ -29,6 +29,13 @@
   text-transform: none;
 }
 
+/* About archive artwork: keep Luminous Threads visually secondary and give it air. */
+.cv-archive-art {
+  width: min(88%, 23.5rem);
+  margin-top: clamp(2.4rem, 4vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
 /* Sculpture & Installation: secondary autobiographical work beneath the lead metadata. */
 .sculpture-supporting-art {
   width: min(72%, 22rem);
@@ -253,6 +260,11 @@
 }
 
 @media (max-width: 900px) {
+  .cv-archive-art {
+    width: min(72%, 20rem);
+    margin: 2rem 0 1.5rem;
+  }
+
   .sculpture-supporting-art {
     width: min(68%, 20rem);
   }
