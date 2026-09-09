@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Spencer Tracy Brown — Artist, Sculptor, Creative Fabricator, Educator</title>
+  <desc id="desc">Editorial social card for Spencer Tracy Brown's artist portfolio.</desc>
+  <rect width="1200" height="630" fill="#f4eadb"/>
+  <circle cx="132" cy="95" r="250" fill="#123f78" opacity="0.10"/>
+  <circle cx="1095" cy="84" r="205" fill="#f27a16" opacity="0.11"/>
+  <path d="M82 94H1118" stroke="#171413" stroke-width="3"/>
+  <path d="M82 108H470" stroke="#123f78" stroke-width="8"/>
+  <path d="M470 108H705" stroke="#f27a16" stroke-width="8"/>
+  <path d="M705 108H875" stroke="#f5c62d" stroke-width="8"/>
+  <path d="M875 108H1018" stroke="#b32619" stroke-width="8"/>
+  <text x="86" y="245" fill="#171413" font-family="Georgia, 'Times New Roman', serif" font-size="78" letter-spacing="-2">Spencer Tracy Brown</text>
+  <text x="90" y="320" fill="#64574e" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" letter-spacing="4">ARTIST · SCULPTOR · CREATIVE FABRICATOR · EDUCATOR</text>
+  <text x="88" y="425" fill="#171413" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-style="italic">Making is how I think.</text>
+  <text x="90" y="501" fill="#64574e" font-family="Arial, Helvetica, sans-serif" font-size="25">Objects, environments, and creative systems that make interior experience tangible.</text>
+  <path d="M82 557H1118" stroke="#171413" stroke-width="2" opacity="0.45"/>
+  <text x="90" y="595" fill="#64574e" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="2">SPENCERTRACYBROWN.COM</text>
+</svg>
