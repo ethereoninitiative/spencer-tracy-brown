@@ -343,6 +343,12 @@
     font-size: clamp(.52rem, 2.3vw, .62rem);
     letter-spacing: .08em;
   }
+
+  .cover .overline {
+    white-space: nowrap;
+    font-size: clamp(.58rem, 2.45vw, .66rem);
+    letter-spacing: .09em;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
