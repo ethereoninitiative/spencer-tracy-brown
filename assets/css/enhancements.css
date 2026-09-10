@@ -349,6 +349,17 @@
     font-size: clamp(.58rem, 2.45vw, .66rem);
     letter-spacing: .09em;
   }
+
+  .site-footer {
+    flex-direction: column;
+    gap: .65rem;
+  }
+
+  .site-footer span:last-child {
+    white-space: nowrap;
+    font-size: clamp(.54rem, 2.35vw, .62rem);
+    letter-spacing: .085em;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
