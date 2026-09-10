@@ -323,14 +323,20 @@
   .slideshow-control-next { right: .45rem; }
 }
 
-/* Mobile header: intentional two-row navigation instead of an orphaned Contact link. */
+/* Mobile header: keep all navigation links on one line at phone widths. */
 @media (max-width: 560px) {
   .site-nav {
-    display: grid;
-    grid-template-columns: repeat(3, max-content);
-    justify-content: start;
-    column-gap: clamp(.95rem, 4vw, 1.25rem);
-    row-gap: .7rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: clamp(.42rem, 2vw, .7rem);
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .site-nav a {
+    font-size: clamp(.52rem, 2.3vw, .62rem);
+    letter-spacing: .08em;
   }
 }
 
