@@ -325,6 +325,11 @@
 
 /* Mobile header: keep all navigation links on one line at phone widths. */
 @media (max-width: 560px) {
+  .wordmark {
+    font-size: 1.24rem;
+    font-weight: 700;
+  }
+
   .site-nav {
     display: flex;
     flex-wrap: nowrap;
