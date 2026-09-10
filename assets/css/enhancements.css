@@ -323,6 +323,17 @@
   .slideshow-control-next { right: .45rem; }
 }
 
+/* Mobile header: intentional two-row navigation instead of an orphaned Contact link. */
+@media (max-width: 560px) {
+  .site-nav {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: start;
+    column-gap: clamp(.95rem, 4vw, 1.25rem);
+    row-gap: .7rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .fabrication-study-slideshow img,
   .slideshow-control { transition: none; }
