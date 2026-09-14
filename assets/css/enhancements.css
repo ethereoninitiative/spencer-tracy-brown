@@ -362,6 +362,13 @@
   }
 }
 
+/* Artist statement: retain the compressed editorial scale while giving descenders room on phones. */
+@media (max-width: 560px) {
+  .statement-title h2 {
+    line-height: 1.04;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .fabrication-study-slideshow img,
   .slideshow-control { transition: none; }
