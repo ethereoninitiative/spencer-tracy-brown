@@ -2,6 +2,14 @@
 
 This changelog records portfolio changes that are externally visible, structurally meaningful, or important to repository continuity.
 
+## 2026-09-20 — Search indexing reconciliation
+
+- Confirmed the production homepage and artist profile are explicitly indexable and self-canonical.
+- Added a discoverable homepage-to-profile author link and aligned the homepage Person graph with the canonical profile page.
+- Refreshed the homepage sitemap modification date.
+- Expanded IndexNow notifications to the homepage, artist profile, public CV, and sitemap.
+- Reconciled repository documentation with the site’s PUBLIC / DISCOVERABLE state.
+
 ## 2026-09-04 — Foundation before formal PR governance
 
 These changes were made directly on `main` before the portfolio adopted the branch/PR operating protocol. They are preserved here so the early build remains legible rather than disappearing into undocumented history.
