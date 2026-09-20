@@ -10,7 +10,7 @@ GitHub Pages serves the site from the `main` branch at the repository root. The 
 
 ## Current state
 
-The site is in **staging / application-ready development**. The first visual canon is deployed, but artwork metadata, portrait/fabrication documentation, CV materials, and final public-launch review remain incomplete. Search indexing stays disabled in `index.html` with `noindex, nofollow` until a deliberate launch PR changes that state.
+The site is **PUBLIC / DISCOVERABLE**. Search indexing was intentionally enabled on September 4, 2026. The homepage, canonical artist profile, public CV, robots.txt, sitemap.xml, structured data, and search-discovery notifications are deployed; ongoing portfolio refinement can continue without reverting the public indexing state.
 
 ## Operating model
 
@@ -46,5 +46,5 @@ See [`docs/PORTFOLIO_PROTOCOL.md`](docs/PORTFOLIO_PROTOCOL.md) for the full oper
 5. Verify desktop and mobile presentation against the live GitHub Pages deployment.
 6. Verify keyboard navigation, focus states, alt text, spelling, contact links, and permissions/credits.
 7. Confirm HTTPS and custom-domain behavior remain healthy.
-8. Decide whether the portfolio is ready for broad public discovery.
-9. Remove `noindex, nofollow` only through an explicit public-launch PR.
+8. Keep canonical URLs, structured data, sitemap entries, and internal links aligned as the site evolves.
+9. Treat any future return to `noindex` as an explicit site-state change through a documented PR.
