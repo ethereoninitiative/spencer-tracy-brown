@@ -217,5 +217,5 @@
   initSlideshow(studioSlideshow, 3800);
 
   const madeAnewSlideshow = document.querySelector('[data-made-anew-slideshow]');
-  initSlideshow(madeAnewSlideshow, 4200);
+  initSlideshow(madeAnewSlideshow, 3000);
 })();
