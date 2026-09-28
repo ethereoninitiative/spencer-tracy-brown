@@ -373,3 +373,69 @@
   .fabrication-study-slideshow img,
   .slideshow-control { transition: none; }
 }
+
+
+/* Creative Practice — collaborative production work. */
+.creative-practice-section { border-top: 2px solid var(--ink); }
+.creative-practice-project {
+  display: grid;
+  grid-template-columns: minmax(16rem,.68fr) minmax(0,1.32fr);
+  gap: clamp(2rem,5vw,5rem);
+  align-items: start;
+  padding-top: clamp(1.25rem,2.5vw,2rem);
+  border-top: 4px solid var(--cadmium);
+}
+.creative-practice-copy { max-width: 34rem; }
+.creative-practice-copy h3 { margin: .2rem 0 .65rem; font-size: clamp(2.5rem,5vw,5rem); line-height: .95; }
+.creative-practice-kicker,.creative-practice-role {
+  color: var(--cobalt);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.creative-practice-role { color: var(--ink); margin-bottom: 1.2rem; }
+.creative-practice-copy > p:last-of-type { color: var(--muted); font-size: 1.02rem; line-height: 1.8; }
+.creative-practice-link {
+  display: inline-flex;
+  margin-top: .65rem;
+  padding: .75rem .9rem;
+  border: 1px solid var(--line-strong);
+  text-decoration: none;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.creative-practice-link:hover,.creative-practice-link:focus-visible { background: var(--ink); color: var(--paper); }
+.made-anew-slideshow {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  border: 2px solid var(--ink);
+  background: #e8dfd3;
+  box-shadow: .55rem .55rem 0 var(--ink);
+}
+.made-anew-slideshow img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .7s ease;
+}
+.made-anew-slideshow img.is-active { opacity: 1; }
+@media(max-width:900px){
+  .creative-practice-project { grid-template-columns: 1fr; }
+  .creative-practice-copy { max-width: 44rem; }
+}
+@media(max-width:560px){
+  .made-anew-slideshow { aspect-ratio: 3 / 4; box-shadow: .38rem .38rem 0 var(--ink); }
+  .creative-practice-copy h3 { font-size: clamp(2.8rem,15vw,4.5rem); }
+}
+@media(prefers-reduced-motion:reduce){ .made-anew-slideshow img { transition:none; } }
