@@ -1,0 +1,1 @@
+AAEA workshop photos and video stills. Rebuilt from original JPEGs and source MOV. Minimal brightness/contrast correction only, no AI detail generation, denoising, heavy sharpening, or artificial upscaling. Video stills are inherently softer than still photography.
