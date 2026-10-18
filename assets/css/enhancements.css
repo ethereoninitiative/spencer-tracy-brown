@@ -611,3 +611,71 @@
 @media (prefers-reduced-motion: reduce) {
   .aaea-card-link img { transition: none; }
 }
+
+
+/* AAEA R2: keep the workshop card photographic, not full-bleed.
+   The original practice layout deliberately spans card B across both columns.
+   Constrain the embedded photo and give the full-width card an editorial split. */
+.practice-grid > .practice-card:nth-child(2) > .aaea-card-link {
+  width: min(100%, 20rem);
+  max-width: 20rem;
+  margin: 1.15rem 0 0;
+}
+.practice-grid > .practice-card:nth-child(2) > .aaea-card-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 54%;
+}
+@media (min-width: 901px) {
+  .practice-grid > .practice-card:nth-child(2) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 20rem);
+    grid-template-rows: auto auto 1fr;
+    column-gap: clamp(1.4rem, 4.5vw, 4rem);
+    align-items: start;
+  }
+  .practice-grid > .practice-card:nth-child(2) > .work-index {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .practice-grid > .practice-card:nth-child(2) > h3 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .practice-grid > .practice-card:nth-child(2) > p:not(.work-index) {
+    grid-column: 1;
+    grid-row: 3;
+    max-width: 55ch;
+  }
+  .practice-grid > .practice-card:nth-child(2) > .aaea-card-link {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    justify-self: end;
+    align-self: center;
+    margin: 0;
+  }
+}
+@media (max-width: 900px) {
+  .practice-grid > .practice-card:nth-child(2) > .aaea-card-link {
+    margin-top: 1.15rem;
+  }
+}
+
+/* Four modest, uncropped documentary photographs instead of oversized blocks. */
+@media (min-width: 901px) {
+  .aaea-workshop-gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(.8rem, 1.8vw, 1.3rem);
+  }
+}
+.aaea-workshop-gallery figure {
+  max-width: 25rem;
+}
+.aaea-workshop-gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
