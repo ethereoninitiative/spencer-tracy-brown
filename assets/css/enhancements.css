@@ -439,3 +439,178 @@
   .creative-practice-copy h3 { font-size: clamp(2.8rem,15vw,4.5rem); }
 }
 @media(prefers-reduced-motion:reduce){ .made-anew-slideshow img { transition:none; } }
+
+
+/* AAEA ceramics workshop — a real, expandable project within Practice B. */
+.aaea-card-link {
+  display: block;
+  margin-top: 1.35rem;
+  border: 1px solid var(--line-strong);
+  text-decoration: none;
+  overflow: hidden;
+  background: rgba(255,255,255,.4);
+}
+.aaea-card-link img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 57%;
+  transition: transform .35s ease;
+}
+.aaea-card-link > span {
+  display: flex;
+  justify-content: space-between;
+  gap: .65rem;
+  align-items: center;
+  padding: .8rem .9rem;
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+.aaea-card-link:hover img,
+.aaea-card-link:focus-visible img { transform: scale(1.025); }
+.aaea-card-link:hover > span,
+.aaea-card-link:focus-visible > span { background: var(--ink); color: var(--paper); }
+
+.aaea-workshop {
+  margin-top: clamp(1.5rem, 3.5vw, 3rem);
+  border-top: 3px solid var(--cadmium);
+  border-bottom: 1px solid var(--line-strong);
+  scroll-margin-top: 10rem;
+}
+.aaea-workshop-summary {
+  display: grid;
+  gap: .65rem;
+  padding: clamp(1.4rem, 3vw, 2.5rem);
+  cursor: pointer;
+  list-style: none;
+  background: rgba(255,255,255,.24);
+}
+.aaea-workshop-summary::-webkit-details-marker { display: none; }
+.aaea-workshop-summary::marker { content: ""; }
+.aaea-workshop-summary:hover,
+.aaea-workshop-summary:focus-visible { background: rgba(255,255,255,.48); }
+.aaea-workshop-summary:focus-visible { outline: 3px solid var(--cobalt); outline-offset: -3px; }
+.aaea-workshop-eyebrow {
+  color: var(--cobalt);
+  font-size: .72rem;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.aaea-workshop-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4.6vw, 4.3rem);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+.aaea-workshop-deck {
+  max-width: 63ch;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.aaea-workshop-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  width: fit-content;
+  min-width: 15rem;
+  margin-top: .25rem;
+  padding: .6rem .85rem;
+  border: 1px solid var(--ink);
+  font-size: .71rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+}
+.aaea-workshop-toggle > span {
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.aaea-workshop[open] .aaea-workshop-toggle > span { transform: rotate(45deg); }
+.aaea-workshop-content { padding: 1.25rem clamp(1rem, 3vw, 2.5rem) clamp(2rem, 4vw, 3.5rem); }
+.aaea-workshop-intro { max-width: 69ch; padding: 0 0 1.2rem; }
+.aaea-workshop-intro > p:first-child { font-size: 1rem; line-height: 1.8; }
+.aaea-workshop-note { color: var(--muted); font-size: .76rem; font-weight: 700; letter-spacing: .06em; }
+.aaea-workshop-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: clamp(1rem, 2.6vw, 2rem);
+}
+.aaea-workshop-gallery figure { margin: 0; min-width: 0; }
+.aaea-workshop-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+  object-position: center 52%;
+  border: 1px solid var(--line-strong);
+  background: var(--paper-warm);
+}
+.aaea-workshop-gallery figcaption {
+  color: var(--muted);
+  margin-top: .55rem;
+  font-size: .78rem;
+  line-height: 1.55;
+}
+.aaea-workshop-film {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 23rem);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 5rem);
+  margin-top: clamp(2rem, 5vw, 4rem);
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+  border-top: 1px solid var(--line-strong);
+}
+.aaea-workshop-film-copy h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 3.2vw, 3.2rem);
+  line-height: 1.15;
+  margin: .3rem 0 .9rem;
+}
+.aaea-workshop-film-copy p:not(.aaea-workshop-eyebrow) {
+  color: var(--muted);
+  max-width: 46ch;
+  line-height: 1.8;
+}
+.aaea-workshop-film-copy a {
+  display: inline-block;
+  margin-top: 1rem;
+  border-bottom: 1px solid currentColor;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.aaea-workshop-player {
+  position: relative;
+  width: min(100%, 23rem);
+  aspect-ratio: 9 / 16;
+  justify-self: end;
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  box-shadow: .5rem .5rem 0 var(--ink);
+  background: #171413;
+}
+.aaea-workshop-player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+@media (max-width: 700px) {
+  .aaea-workshop-gallery { grid-template-columns: 1fr; }
+  .aaea-workshop-film { grid-template-columns: 1fr; }
+  .aaea-workshop-player { justify-self: start; width: min(100%, 21rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aaea-card-link img { transition: none; }
+}
