@@ -2,6 +2,12 @@
 
 This changelog records portfolio changes that are externally visible, structurally meaningful, or important to repository continuity.
 
+## 2026-11-06 — Luminous Threads unframed presentation (PR #39)
+
+- Removed only the website's additional black border and offset shadow around the `Luminous Threads` photograph.
+- Preserved the original full-aspect image and its existing description as a shallow mixed-media relief.
+- Gave the artwork more room in the About section, including a modestly wider, responsive mobile presentation, without affecting the frame styles of other works.
+
 ## 2026-11-06 — Stone Container additional photographic views (PR #38)
 
 - Replaced the opening *Stone Container* gallery view with the artist's newly supplied angled exterior-and-interior photograph, lightly cropped and adjusted as documentary photography.

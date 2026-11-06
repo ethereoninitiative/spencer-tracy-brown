@@ -29,11 +29,15 @@
   text-transform: none;
 }
 
-/* Luminous Threads is a shallow relief, not a crop-to-fill painting.
-   Preserve the source photograph's complete outline, mat, and string details. */
+/* Luminous Threads is a shallow mixed-media relief.
+   Show its original photograph in full without the site's additional frame. */
 .cv-archive-art .art-frame {
   aspect-ratio: auto;
   min-height: 0;
+  overflow: visible;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
 }
 .cv-archive-art .art-frame img {
   display: block;
@@ -43,11 +47,11 @@
   object-position: center center;
 }
 
-/* About archive artwork: preserve Luminous Threads' original scale, add breathing room only. */
+/* Leave the archival photo intact and give it room, especially on phones. */
 .cv-archive-art {
-  width: min(100%, 27rem);
-  margin-top: clamp(2.4rem, 4vw, 3.5rem);
-  margin-bottom: 1rem;
+  width: min(100%, 29rem);
+  margin-top: clamp(2.6rem, 4vw, 3.75rem);
+  margin-bottom: clamp(1.4rem, 2.5vw, 2rem);
 }
 
 /* Sculpture & Installation: secondary autobiographical work beneath the lead metadata. */
@@ -275,8 +279,8 @@
 
 @media (max-width: 900px) {
   .cv-archive-art {
-    width: min(78%, 22rem);
-    margin: 2rem 0 1.5rem;
+    width: min(88%, 27rem);
+    margin: clamp(2.1rem, 4vw, 2.8rem) 0 1.8rem;
   }
 
   .sculpture-supporting-art {
