@@ -2,6 +2,13 @@
 
 This changelog records portfolio changes that are externally visible, structurally meaningful, or important to repository continuity.
 
+## 2026-11-06 — Stone Container artwork study (PR #36)
+
+- Added the artist-confirmed *Stone Container: A White Surface Without Sunlight, Dark Blue, and a Little Yellowish Red* in the Ceramics & Material Studies area without replacing the commissioned vessel or teapot.
+- Published five restrained documentary photograph edits through a manual, touch-friendly, keyboard-accessible gallery with a short expandable artist note and shareable artwork anchor.
+- Preserved the existing aesthetic and slideshow implementations; the gallery uses isolated CSS/JS and does not auto-advance.
+- Registered the artist-provided title, approximate date, surface description, image provenance, and unknown dimensions in artwork metadata.
+
 ## 2026-09-20 — Search indexing reconciliation
 
 - Confirmed the production homepage and artist profile are explicitly indexable and self-canonical.
