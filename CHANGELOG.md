@@ -2,7 +2,7 @@
 
 This changelog records portfolio changes that are externally visible, structurally meaningful, or important to repository continuity.
 
-## 2026-11-06 — Stone Container additional photographic views (PR forthcoming)
+## 2026-11-06 — Stone Container additional photographic views (PR #38)
 
 - Replaced the opening *Stone Container* gallery view with the artist's newly supplied angled exterior-and-interior photograph, lightly cropped and adjusted as documentary photography.
 - Added an intimate spoon-in-use photograph as the closing sixth slide, maintaining all other works and the manual navigation experience.
