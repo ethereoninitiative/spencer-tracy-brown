@@ -45,3 +45,13 @@ When metadata is added to the public page, preserve the distinction between:
 ## Next action
 
 Populate the registry from artist-held records, labels, old portfolio files, photographs, exhibition documentation, or direct artist recollection. Then wire only verified fields into the relevant figures/cards in `index.html`.
+
+## Stone Container — verified artwork addition (2026-11-06)
+
+- **Formal title (artist-confirmed):** *Stone Container: A White Surface Without Sunlight, Dark Blue, and a Little Yellowish Red*
+- **Toki Pona companion:** `poki kiwen: selo walo pi suno ala, laso pimeja, loje jelo lili`
+- **Date:** c. 2024 (approximate, based on the artist's recollection of making the vessel a couple of years earlier).
+- **Medium:** ceramic vessel with a matte-white ground, cobalt blue and salmon-orange accents (artist description). Specific glaze chemistry and exact dimensions are not verified.
+- **Portfolio placement:** Selected Work → Ceramics & Material Studies → five-view artwork study with manual navigation.
+- **Photography:** Five restrained photo-editor derivatives of the artist-supplied documentary photographs, including cobalt, reverse salmon, interior and in-use views. No generative reconstruction in the five published photographs.
+- **Provenance:** artist-provided photographs and title, documented in direct conversation. Original source photographs retained separately from deploy assets; web derivatives in `assets/images/stone-container/`.

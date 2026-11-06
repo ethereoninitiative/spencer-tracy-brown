@@ -1,0 +1,142 @@
+/* Stone Container R1: a restrained artwork study nested in Ceramics. */
+.stone-study {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: minmax(0,.84fr) minmax(0,1.16fr);
+  gap: clamp(1.5rem,3.8vw,3.4rem);
+  align-items: start;
+  width: 100%;
+  min-width: 0;
+  margin-top: clamp(2.5rem,4vw,4rem);
+  padding-top: clamp(1.3rem,2.6vw,2rem);
+  border-top: 1px solid var(--line-strong,#64574e);
+  scroll-margin-top: 10rem;
+}
+.stone-study-copy, .stone-gallery { min-width: 0; }
+.stone-study-eyebrow {
+  margin: 0 0 .85rem;
+  color: var(--cobalt,#123f78);
+  font-family: var(--sans,system-ui,sans-serif);
+  font-size: .69rem;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.stone-study h4 {
+  margin: 0 0 1.1rem;
+  color: var(--ink,#171413);
+  font-family: var(--serif,Georgia,serif);
+  font-size: clamp(1.5rem,2.7vw,2.35rem);
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: 1.3;
+}
+.stone-study-toki {
+  margin: 0 0 1.1rem;
+  color: var(--cobalt,#123f78);
+  font-family: var(--serif,Georgia,serif);
+  font-size: .85rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+.stone-study-summary, .stone-study-note p {
+  color: var(--muted,#64574e);
+  font-size: .91rem;
+  line-height: 1.75;
+}
+.stone-study-note { margin: 1.5rem 0 1rem; border-top: 1px solid var(--line-strong,#aaa); border-bottom: 1px solid var(--line-strong,#aaa); }
+.stone-study-note summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem 0;
+  cursor: pointer;
+  color: var(--ink,#171413);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  list-style: none;
+  text-transform: uppercase;
+}
+.stone-study-note summary::-webkit-details-marker { display: none; }
+.stone-study-note summary span { font-size: 1.15rem; font-weight: 400; }
+.stone-study-note[open] summary span { transform: rotate(45deg); }
+.stone-study-note p { margin: .2rem 0 1rem; }
+.stone-study-note summary:focus-visible,
+.stone-study-permalink:focus-visible,
+.stone-gallery:focus-visible,
+.stone-gallery button:focus-visible {
+  outline: 3px solid var(--cobalt,#123f78);
+  outline-offset: 4px;
+}
+.stone-study-permalink {
+  display: inline-block;
+  margin-top: .15rem;
+  color: var(--cobalt,#123f78);
+  font-size: .73rem;
+  font-weight: 700;
+  text-underline-offset: .23em;
+}
+.stone-gallery-viewport { width: 100%; min-width: 0; }
+.stone-gallery-slide { margin: 0 0 1.5rem; }
+.stone-gallery-slide[hidden] { display: none !important; }
+.stone-gallery-frame {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 2px solid var(--ink,#171413);
+  background: #e8dfd3;
+  box-shadow: .38rem .38rem 0 var(--ink,#171413);
+}
+.stone-gallery-frame img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.stone-gallery-slide figcaption {
+  margin: .8rem 0 0;
+  color: var(--muted,#64574e);
+  font-family: var(--sans,system-ui,sans-serif);
+  font-size: .74rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .025em;
+  text-transform: none;
+}
+.stone-gallery-controls { display: none; }
+.stone-gallery.is-enhanced .stone-gallery-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: .55rem 0 0;
+}
+.stone-gallery-controls button {
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0;
+  border: 1px solid var(--ink,#171413);
+  border-radius: 50%;
+  background: rgba(255,255,255,.4);
+  color: var(--ink,#171413);
+  cursor: pointer;
+}
+.stone-gallery-controls button span { font-family: Georgia,serif; font-size: 1.8rem; line-height: 1; margin-top: -.18rem; }
+.stone-gallery-controls button:hover { background: var(--cobalt,#123f78); color: white; }
+.stone-gallery-count { color: var(--muted,#64574e); font-size: .72rem; font-weight: 700; letter-spacing: .08em; }
+.stone-gallery-hint { display: none; margin: .5rem 0 0; color: var(--muted,#64574e); font-size: .72rem; text-align: center; }
+.stone-gallery.is-enhanced .stone-gallery-hint { display: block; }
+.stone-gallery.is-enhanced .stone-gallery-viewport { touch-action: pan-y; }
+@media (max-width: 900px) {
+  .stone-study { grid-template-columns: 1fr; grid-row: auto; gap: 1.4rem; }
+  .stone-gallery { width: min(100%,29rem); }
+}
+@media (max-width: 560px) {
+  .stone-study { margin-top: 2.1rem; scroll-margin-top: 12rem; }
+  .stone-study h4 { font-size: clamp(1.5rem,7vw,2rem); line-height: 1.32; }
+  .stone-gallery { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stone-study-note summary span { transition: none; }
+}
