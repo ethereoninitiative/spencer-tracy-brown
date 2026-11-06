@@ -2,6 +2,12 @@
 
 This changelog records portfolio changes that are externally visible, structurally meaningful, or important to repository continuity.
 
+## 2026-11-06 — Luminous Threads framing and medium correction (PR forthcoming)
+
+- Removed the fixed 4:5 crop from `Luminous Threads` in the About archive, so the original photograph renders at its natural proportions across desktop and mobile.
+- Corrected the artwork description and image alternative text from a flat painting to a shallow mixed-media relief with applied string and textured medium.
+- Left all other artwork frames, captions, and the overall site layout unchanged.
+
 ## 2026-11-06 — Stone Container artwork study (PR #36)
 
 - Added the artist-confirmed *Stone Container: A White Surface Without Sunlight, Dark Blue, and a Little Yellowish Red* in the Ceramics & Material Studies area without replacing the commissioned vessel or teapot.
