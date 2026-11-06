@@ -2,7 +2,7 @@
 
 This changelog records portfolio changes that are externally visible, structurally meaningful, or important to repository continuity.
 
-## 2026-11-06 — Luminous Threads framing and medium correction (PR forthcoming)
+## 2026-11-06 — Luminous Threads framing and medium correction (PR #37)
 
 - Removed the fixed 4:5 crop from `Luminous Threads` in the About archive, so the original photograph renders at its natural proportions across desktop and mobile.
 - Corrected the artwork description and image alternative text from a flat painting to a shallow mixed-media relief with applied string and textured medium.
