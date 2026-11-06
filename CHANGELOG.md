@@ -2,7 +2,7 @@
 
 This changelog records portfolio changes that are externally visible, structurally meaningful, or important to repository continuity.
 
-## 2026-11-06 — Luminous Threads unframed presentation (PR forthcoming)
+## 2026-11-06 — Luminous Threads unframed presentation (PR #39)
 
 - Removed only the website's additional black border and offset shadow around the `Luminous Threads` photograph.
 - Preserved the original full-aspect image and its existing description as a shallow mixed-media relief.
