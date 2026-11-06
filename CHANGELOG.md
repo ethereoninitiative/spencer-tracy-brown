@@ -2,6 +2,12 @@
 
 This changelog records portfolio changes that are externally visible, structurally meaningful, or important to repository continuity.
 
+## 2026-11-06 — Stone Container additional photographic views (PR #38)
+
+- Replaced the opening *Stone Container* gallery view with the artist's newly supplied angled exterior-and-interior photograph, lightly cropped and adjusted as documentary photography.
+- Added an intimate spoon-in-use photograph as the closing sixth slide, maintaining all other works and the manual navigation experience.
+- All adjustments are non-generative; the authentic vessel form, glaze, and markings remain unchanged.
+
 ## 2026-11-06 — Luminous Threads framing and medium correction (PR #37)
 
 - Removed the fixed 4:5 crop from `Luminous Threads` in the About archive, so the original photograph renders at its natural proportions across desktop and mobile.

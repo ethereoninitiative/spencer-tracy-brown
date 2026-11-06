@@ -52,6 +52,6 @@ Populate the registry from artist-held records, labels, old portfolio files, pho
 - **Toki Pona companion:** `poki kiwen: selo walo pi suno ala, laso pimeja, loje jelo lili`
 - **Date:** c. 2024 (approximate, based on the artist's recollection of making the vessel a couple of years earlier).
 - **Medium:** ceramic vessel with a matte-white ground, cobalt blue and salmon-orange accents (artist description). Specific glaze chemistry and exact dimensions are not verified.
-- **Portfolio placement:** Selected Work → Ceramics & Material Studies → five-view artwork study with manual navigation.
-- **Photography:** Five restrained photo-editor derivatives of the artist-supplied documentary photographs, including cobalt, reverse salmon, interior and in-use views. No generative reconstruction in the five published photographs.
+- **Portfolio placement:** Selected Work → Ceramics & Material Studies → six-view artwork study with manual navigation.
+- **Photography:** Six restrained photo-editor derivatives of artist-supplied documentary photographs, including the newly selected angled lead, cobalt and salmon sides, interior, artist holding the vessel, and spoon-in-use detail. Edits were limited to crop, exposure, contrast and gentle sharpening; no generative reconstruction.
 - **Provenance:** artist-provided photographs and title, documented in direct conversation. Original source photographs retained separately from deploy assets; web derivatives in `assets/images/stone-container/`.
